@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  margin: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  text-align: center;
+  background-color: #f6f6f6;
+}
+#search form {
+  border: red solid 2px;
+}
+#search form .search__searchfield {
+  margin: 15px;
+  border: none;
+  background-color: transparent;
+}
+#search .search__title {
+  font-size: 1.55rem;
+  margin: 30px 30px 15px 30px;
+}
+#search .search__subtitle {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 30px 6px 15px 6px;
+}
+#search .search__btn {
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 20px 10px 40px 10px;
+  box-shadow: 4px 2px 20px #c9c9c9;
+  background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
+}
+
+#fonctionnement h2 {
+  margin: 40px 20px;
+}
+#fonctionnement ol {
+  list-style-type: none;
+  counter-reset: liste-couleur;
+  padding: 0;
+}
+#fonctionnement ol li {
+  width: 220px;
+  background-color: #f6f6f6;
+  box-shadow: 4px 2px 20px #c9c9c9;
+  padding: 25px;
+  border-radius: 25px;
+  margin: 25px;
+  font-size: 0.95rem;
+  position: relative;
+}
+#fonctionnement ol li::before {
+  content: counter(liste-couleur);
+  counter-increment: liste-couleur;
+  color: #ffffff;
+  background-color: #9356dc;
+  border-radius: 50px;
+  padding: 8px 12px;
+  position: absolute;
+  left: -4vw;
+  top: 6vw;
+}
+#fonctionnement .fas {
+  padding: 0 15px;
+}
+
+.restaurants {
+  padding-top: 10px;
+  background-color: #f6f6f6;
+}
+.restaurants h2 {
+  margin: 40px 10px 10px 20px;
+}
+.restaurants .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+.restaurants .container h3 {
+  font-size: 1.15rem;
+  margin: 10px 20px 0px 20px;
+}
+.restaurants .container p {
+  font-size: 1.05rem;
+  margin: 5px 20px 0px 20px;
+}
+.restaurants .far {
+  position: absolute;
+  bottom: 7vw;
+  right: 8vw;
+  font-size: 2rem;
+  color: red;
+  z-index: 1;
+}
+.restaurants .fas {
+  position: absolute;
+  bottom: 7vw;
+  right: 8vw;
+  font-size: 2rem;
+}
+.restaurants .boxrestaurant {
+  position: relative;
+  width: 100%;
+  height: 75vw;
+  margin: 25px;
+  border-radius: 15px;
+  box-shadow: 4px 2px 20px #c9c9c9;
+}
+.restaurants .imagerestaurant {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+footer {
+  padding: 20px;
+  background-color: #353535;
+}
+footer h4 {
+  color: #ffffff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+footer ul {
+  padding: 0;
+}
+footer ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+footer ul li a {
+  color: #ffffff;
+}
+footer ul li .fas {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */

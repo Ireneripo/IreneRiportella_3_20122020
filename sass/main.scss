@@ -1,0 +1,179 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$backgroundcolor-main: #f6f6f6;
+$backgroundcolor-footer: #353535;
+$color-textlight: #ffffff;
+$color-shadow: #c9c9c9;
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+.logo {
+  width: 50%;
+  height: auto;
+  margin: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  text-align: center;
+  background-color: $backgroundcolor-main;
+  & form {
+    border: red solid 2px;
+    & .search__searchfield {
+      margin: 15px;
+      border: none;
+      background-color: transparent;
+    }
+  }
+  & .search__title {
+    font-size: 1.55rem;
+    margin: 30px 30px 15px 30px;
+  }
+  & .search__subtitle {
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin: 30px 6px 15px 6px;
+  }
+  & .search__btn {
+    border: none;
+    border-radius: 25px;
+    padding: 15px;
+    color: $color-textlight;
+    font-weight: bold;
+    margin: 20px 10px 40px 10px;
+    box-shadow: 4px 2px 20px $color-shadow;
+    background: linear-gradient(
+      177deg,
+      $color-secondary 10%,
+      $color-primary 90%
+    );
+  }
+}
+
+#fonctionnement {
+  & h2 {
+    margin: 40px 20px;
+  }
+  & ol {
+    list-style-type: none;
+    counter-reset: liste-couleur;
+    padding: 0;
+    & li {
+      width: 220px;
+      background-color: $backgroundcolor-main;
+      box-shadow: 4px 2px 20px $color-shadow;
+      padding: 25px;
+      border-radius: 25px;
+      margin: 25px;
+      font-size: 0.95rem;
+      position: relative;
+      &::before {
+        content: counter(liste-couleur);
+        counter-increment: liste-couleur;
+        color: $color-textlight;
+        background-color: $color-primary;
+        border-radius: 50px;
+        padding: 8px 12px;
+        position: absolute;
+        left: -4vw;
+        top: 6vw;
+      }
+    }
+  }
+  & .fas {
+    padding: 0 15px;
+  }
+}
+.restaurants {
+  padding-top: 10px;
+  & h2 {
+    margin: 40px 10px 10px 20px;
+  }
+  background-color: $backgroundcolor-main;
+  & .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+    & h3 {
+      font-size: 1.15rem;
+      margin: 10px 20px 0px 20px;
+    }
+    & p {
+      font-size: 1.05rem;
+      margin: 5px 20px 0px 20px;
+    }
+  }
+  .far {
+    position: absolute;
+    bottom: 7vw;
+    right: 8vw;
+    font-size: 2rem;
+    color: red;
+    z-index: 1;
+  }
+  .fas {
+    position: absolute;
+    bottom: 7vw;
+    right: 8vw;
+    font-size: 2rem;
+  }
+
+  & .boxrestaurant {
+    position: relative;
+    width: 100%;
+    height: 75vw;
+    margin: 25px;
+    border-radius: 15px;
+    box-shadow: 4px 2px 20px $color-shadow;
+  }
+  & .imagerestaurant {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+}
+footer {
+  padding: 20px;
+  background-color: $backgroundcolor-footer;
+  & h4 {
+    color: $color-textlight;
+    font-family: "Shrikhand", cursive;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  & ul {
+    padding: 0;
+    & li {
+      list-style-type: none;
+      margin-bottom: 10px;
+      & a {
+        color: $color-textlight;
+      }
+      & .fas {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+}
+
+@media screen and (min-width: 1200px) {
+}

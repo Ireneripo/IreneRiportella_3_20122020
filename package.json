@@ -1,0 +1,19 @@
+{
+  "name": "ireneriportella_3_20122020",
+  "version": "1.0.0",
+  "description": "Formation Developpeur Web_P3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ireneripo/IreneRiportella_3_20122020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ireneripo/IreneRiportella_3_20122020/issues"
+  },
+  "homepage": "https://github.com/Ireneripo/IreneRiportella_3_20122020#readme"
+}
