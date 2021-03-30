@@ -2,12 +2,19 @@
   margin: 0;
 }
 
+html {
+  width: 100%;
+  -webkit-overflow-x: hidden;
+  overflow-x: hidden;
+  margin: 0;
+}
+
 body {
   font-family: "roboto", sans-serif;
 }
 
 .logo {
-  width: 50%;
+  width: 36vmax;
   height: auto;
   margin: 20px;
 }
@@ -36,9 +43,9 @@ header {
   margin: 30px 30px 15px 30px;
 }
 #search .search__subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: normal;
-  margin: 30px 6px 15px 6px;
+  margin: 30px 10px 15px 10px;
 }
 #search .search__btn {
   border: none;
@@ -55,17 +62,22 @@ header {
   margin: 40px 20px;
 }
 #fonctionnement ol {
+  width: 90%;
   list-style-type: none;
   counter-reset: liste-couleur;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   padding: 0;
+  margin: auto;
 }
 #fonctionnement ol li {
-  width: 220px;
+  width: 88%;
   background-color: #f6f6f6;
   box-shadow: 4px 2px 20px #c9c9c9;
   padding: 25px;
   border-radius: 25px;
-  margin: 25px;
+  margin: 10px;
   font-size: 0.95rem;
   position: relative;
 }
@@ -76,13 +88,13 @@ header {
   font-weight: bolder;
   background-color: #9356dc;
   border-radius: 50px;
-  padding: 8px 12px;
+  padding: 5px 9px;
   position: absolute;
   left: -4vw;
   top: 6vw;
 }
 #fonctionnement .fas {
-  padding: 0 15px;
+  padding: 0 14px 0 8px;
 }
 
 .restaurants {
@@ -93,37 +105,37 @@ header {
   margin: 40px 10px 10px 20px;
 }
 .restaurants .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  width: 100%;
   padding-bottom: 40px;
+  margin: auto;
 }
 .restaurants .container h3 {
-  font-size: 1.15rem;
-  margin: 10px 20px 0px 20px;
+  font-size: 1.1rem;
+  margin: 8px 20px 0px 15px;
 }
 .restaurants .container p {
-  font-size: 1.05rem;
-  margin: 5px 20px 0px 20px;
+  font-size: 1rem;
+  margin: 5px 20px 0px 15px;
 }
 .restaurants .far {
   position: absolute;
   bottom: 7vw;
   right: 8vw;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .restaurants .fas {
   position: absolute;
   bottom: 7vw;
   right: 8vw;
-  font-size: 2rem;
+  font-size: 1.5rem;
   opacity: 0;
 }
 .restaurants .boxrestaurant {
   position: relative;
-  width: 100%;
-  height: 75vw;
-  margin: 20px;
+  width: 85%;
+  height: 70vw;
+  margin: auto;
+  margin-top: 25px;
   border-radius: 15px;
   box-shadow: 4px 2px 20px #c9c9c9;
 }
@@ -157,6 +169,31 @@ footer ul li a {
 }
 footer ul li .fas {
   margin-right: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  #search .search__subtitle {
+    margin: 30px 100px;
+  }
+
+  #fonctionnement::before {
+    background-color: red;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container .boxrestaurant {
+    width: 42%;
+    height: 36vw;
+    margin: 10px 15px;
+  }
+  .container .far {
+    bottom: 3vw;
+    right: 4vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
