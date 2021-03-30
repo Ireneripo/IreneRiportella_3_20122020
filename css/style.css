@@ -26,9 +26,6 @@ header {
   text-align: center;
   background-color: #f6f6f6;
 }
-#search form {
-  border: red solid 2px;
-}
 #search form .search__searchfield {
   margin: 15px;
   border: none;
@@ -76,6 +73,7 @@ header {
   content: counter(liste-couleur);
   counter-increment: liste-couleur;
   color: #ffffff;
+  font-weight: bolder;
   background-color: #9356dc;
   border-radius: 50px;
   padding: 8px 12px;
@@ -113,20 +111,19 @@ header {
   bottom: 7vw;
   right: 8vw;
   font-size: 2rem;
-  color: red;
-  z-index: 1;
 }
 .restaurants .fas {
   position: absolute;
   bottom: 7vw;
   right: 8vw;
   font-size: 2rem;
+  opacity: 0;
 }
 .restaurants .boxrestaurant {
   position: relative;
   width: 100%;
   height: 75vw;
-  margin: 25px;
+  margin: 20px;
   border-radius: 15px;
   box-shadow: 4px 2px 20px #c9c9c9;
 }
