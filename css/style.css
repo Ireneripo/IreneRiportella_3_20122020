@@ -16,7 +16,7 @@ body {
 .logo {
   width: 36vmax;
   height: auto;
-  margin: 20px;
+  margin: 18px;
 }
 
 a {
@@ -33,8 +33,13 @@ header {
   text-align: center;
   background-color: #f6f6f6;
 }
+#search form {
+  background: linear-gradient(180deg, #d3d3d3 0%, #eaeaea 12%);
+}
 #search form .search__searchfield {
-  margin: 15px;
+  width: 120px;
+  padding: 16px 5px;
+  font-weight: bold;
   border: none;
   background-color: transparent;
 }
@@ -48,6 +53,7 @@ header {
   margin: 30px 10px 15px 10px;
 }
 #search .search__btn {
+  cursor: pointer;
   border: none;
   border-radius: 25px;
   padding: 15px;
@@ -58,8 +64,11 @@ header {
   background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
 }
 
+#fonctionnement {
+  margin-bottom: 40px;
+}
 #fonctionnement h2 {
-  margin: 40px 20px;
+  margin: 40px 20px 15px 20px;
 }
 #fonctionnement ol {
   width: 90%;
@@ -154,7 +163,7 @@ footer {
 footer h4 {
   color: #ffffff;
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 10px;
 }
 footer ul {
@@ -176,8 +185,9 @@ footer ul li .fas {
     margin: 30px 100px;
   }
 
-  #fonctionnement::before {
-    background-color: red;
+  #fonctionnement ol li::before {
+    left: -2vw;
+    top: 3.5vw;
   }
 
   .container {
@@ -193,6 +203,40 @@ footer ul li .fas {
   .container .far {
     bottom: 3vw;
     right: 4vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #fonctionnement {
+    margin-right: 40px;
+    float: right;
+    width: 25%;
+  }
+  #fonctionnement ol {
+    margin-right: 40px;
+  }
+  #fonctionnement ol li::before {
+    left: -1vw;
+    top: 2vw;
+  }
+
+  .restaurants {
+    padding: 0;
+    width: 70%;
+    background-color: initial;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+  .container .boxrestaurant {
+    margin: 20px 0;
+    width: 35%;
+    height: 20vw;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    text-align: center;
   }
 }
 
