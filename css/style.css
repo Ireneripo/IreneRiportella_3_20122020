@@ -55,9 +55,10 @@ header {
 }
 #search .search__btn {
   cursor: pointer;
+  opacity: 0.8;
   border: none;
   border-radius: 25px;
-  padding: 15px;
+  padding: 15px 18px;
   color: #ffffff;
   font-weight: bold;
   margin: 20px 10px 40px 10px;
@@ -84,7 +85,7 @@ header {
 #fonctionnement ol li {
   width: 88%;
   background-color: #f6f6f6;
-  box-shadow: 4px 2px 20px #bfbfbf;
+  box-shadow: 3px 3px 20px #bfbfbf;
   padding: 25px;
   border-radius: 25px;
   margin: 12px;
@@ -129,7 +130,7 @@ header {
   margin: 5px 20px 0px 15px;
 }
 .restaurants .far {
-  color: #909090;
+  color: #777777;
   position: absolute;
   bottom: 7vw;
   right: 8vw;
@@ -151,7 +152,7 @@ header {
   margin: auto;
   margin-top: 25px;
   border-radius: 15px;
-  box-shadow: 4px 2px 20px #bfbfbf;
+  box-shadow: 3px 3px 20px #bfbfbf;
   background-color: #ffff;
 }
 .restaurants .imagerestaurant {
@@ -196,6 +197,85 @@ footer ul li a {
 }
 footer ul li .fas {
   margin-right: 10px;
+}
+
+#background-image {
+  width: 100%;
+}
+
+#backgroundmenu {
+  background: #f6f6f6;
+  padding-bottom: 10px;
+  position: relative;
+}
+#backgroundmenu .main__title {
+  font-family: "Shrikhand", cursive;
+}
+#backgroundmenu .heart {
+  position: absolute;
+  top: 77vw;
+  right: 8vw;
+  font-size: 1.35rem;
+  color: #777777;
+}
+#backgroundmenu .heart2 {
+  position: absolute;
+  top: 77vw;
+  right: 8vw;
+  font-size: 1.35rem;
+  opacity: 0;
+}
+
+.main__title {
+  font-size: 1.35rem;
+  margin: 25px 20px;
+}
+
+#entrees .entrees__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: initial;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  border-bottom: solid 2px #99e2d0;
+}
+
+#plats .plats__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: initial;
+  margin-left: 20px;
+}
+
+#desserts .desserts__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: initial;
+  margin-left: 20px;
+}
+
+.entree,
+.plat,
+.dessert {
+  background: #ffffff;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 3px 3px 20px #bfbfbf;
+}
+
+#btn--commander {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 40px auto 70px auto;
+  display: block;
+  box-shadow: 3px 3px 20px #bfbfbf;
+  background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
 }
 
 @media screen and (min-width: 600px) {
@@ -269,50 +349,6 @@ footer ul li .fas {
   footer {
     text-align: center;
   }
-}
-#background-image {
-  width: 100%;
-}
-
-#backgroundmenu {
-  background: #f6f6f6;
-}
-
-main .main__title {
-  font-family: "Shrikhand", cursive;
-}
-
-#entrees .entrees__title {
-  text-transform: uppercase;
-}
-
-#plats .plats__title {
-  text-transform: uppercase;
-}
-
-#desserts .desserts__title {
-  text-transform: uppercase;
-}
-
-.entree,
-.plat,
-.dessert {
-  background: #ffffff;
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 15px;
-}
-
-#btn--commander {
-  cursor: pointer;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 40px;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 20px 10px 40px 10px;
-  box-shadow: 4px 2px 20px #bfbfbf;
-  background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
 }
 
 /*# sourceMappingURL=style.css.map */

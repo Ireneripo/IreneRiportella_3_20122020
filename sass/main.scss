@@ -70,9 +70,10 @@ header {
   }
   & .search__btn {
     cursor: pointer;
+    opacity: 0.8;
     border: none;
     border-radius: 25px;
-    padding: 15px;
+    padding: 15px 18px;
     color: $color-textlight;
     font-weight: bold;
     margin: 20px 10px 40px 10px;
@@ -102,7 +103,7 @@ header {
     & li {
       width: 88%;
       background-color: $backgroundcolor-main;
-      box-shadow: 4px 2px 20px $color-shadow;
+      @include box-shadow;
       padding: 25px;
       border-radius: 25px;
       margin: 12px;
@@ -147,7 +148,7 @@ header {
     }
   }
   & .far {
-    color: darken($backgroundcolor-main, 40);
+    color: darken($backgroundcolor-main, 50);
     position: absolute;
     bottom: 7vw;
     right: 8vw;
@@ -174,7 +175,7 @@ header {
     margin: auto;
     margin-top: 25px;
     border-radius: 15px;
-    box-shadow: 4px 2px 20px $color-shadow;
+    @include box-shadow;
     background-color: #ffff;
   }
   & .imagerestaurant {
@@ -219,6 +220,88 @@ footer {
       }
     }
   }
+}
+
+// Stylesheet Menu
+
+#background-image {
+  width: 100%;
+}
+#backgroundmenu {
+  background: $backgroundcolor-main;
+  padding-bottom: 10px;
+  position: relative;
+  & .main__title {
+    font-family: "Shrikhand", cursive;
+  }
+  & .heart {
+    position: absolute;
+    top: 77vw;
+    right: 8vw;
+    font-size: 1.35rem;
+    color: darken($backgroundcolor-main, 50);
+  }
+  & .heart2 {
+    position: absolute;
+    top: 77vw;
+    right: 8vw;
+    font-size: 1.35rem;
+    opacity: 0;
+  }
+}
+.main__title {
+  font-size: 1.35rem;
+  margin: 25px 20px;
+}
+#entrees {
+  & .entrees__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: initial;
+    margin-left: 20px;
+    // width: fit-content;
+    padding-bottom: 5px;
+    border-bottom: solid 2px $color-tertiary;
+  }
+}
+#plats {
+  & .plats__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: initial;
+    margin-left: 20px;
+  }
+}
+#desserts {
+  & .desserts__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: initial;
+    margin-left: 20px;
+  }
+}
+.entree,
+.plat,
+.dessert {
+  background: #ffffff;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 15px;
+  @include box-shadow;
+}
+
+#btn--commander {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: $color-textlight;
+  font-weight: bold;
+  margin: 40px auto 70px auto;
+  display: block;
+  @include box-shadow;
+  background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
 }
 
 @media screen and (min-width: 600px) {
@@ -291,51 +374,4 @@ footer {
   footer {
     text-align: center;
   }
-}
-
-// Menu La Palette du goût
-#background-image {
-  width: 100%;
-}
-#backgroundmenu {
-  background: $backgroundcolor-main;
-}
-main {
-  & .main__title {
-    font-family: "Shrikhand", cursive;
-  }
-}
-#entrees {
-  & .entrees__title {
-    text-transform: uppercase;
-  }
-}
-#plats {
-  & .plats__title {
-    text-transform: uppercase;
-  }
-}
-#desserts {
-  & .desserts__title {
-    text-transform: uppercase;
-  }
-}
-.entree,
-.plat,
-.dessert {
-  background: #ffffff;
-  margin: 20px 15px;
-  padding: 10px;
-  border-radius: 15px;
-}
-#btn--commander {
-  cursor: pointer;
-  border: none;
-  border-radius: 25px;
-  padding: 15px 40px;
-  color: $color-textlight;
-  font-weight: bold;
-  margin: 20px 10px 40px 10px;
-  box-shadow: 4px 2px 20px $color-shadow;
-  background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
 }
