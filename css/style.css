@@ -61,8 +61,8 @@ header {
   color: #ffffff;
   font-weight: bold;
   margin: 20px 10px 40px 10px;
-  box-shadow: 4px 2px 20px #c9c9c9;
   background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
+  box-shadow: 3px 3px 20px #bfbfbf;
 }
 
 #fonctionnement {
@@ -84,10 +84,10 @@ header {
 #fonctionnement ol li {
   width: 88%;
   background-color: #f6f6f6;
-  box-shadow: 4px 2px 20px #c9c9c9;
+  box-shadow: 4px 2px 20px #bfbfbf;
   padding: 25px;
   border-radius: 25px;
-  margin: 10px;
+  margin: 12px;
   font-size: 0.95rem;
   position: relative;
 }
@@ -151,7 +151,7 @@ header {
   margin: auto;
   margin-top: 25px;
   border-radius: 15px;
-  box-shadow: 4px 2px 20px #c9c9c9;
+  box-shadow: 4px 2px 20px #bfbfbf;
   background-color: #ffff;
 }
 .restaurants .imagerestaurant {
@@ -232,7 +232,7 @@ footer ul li .fas {
   #fonctionnement {
     margin-right: 40px;
     float: right;
-    width: 25%;
+    width: 27%;
   }
   #fonctionnement ol {
     margin-right: 40px;
@@ -244,7 +244,7 @@ footer ul li .fas {
 
   .restaurants {
     padding: 0;
-    width: 70%;
+    width: 68%;
     background-color: initial;
   }
   .restaurants .nouveau {
@@ -294,15 +294,24 @@ main .main__title {
   text-transform: uppercase;
 }
 
+.entree,
+.plat,
+.dessert {
+  background: #ffffff;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
 #btn--commander {
   cursor: pointer;
   border: none;
   border-radius: 25px;
-  padding: 15px;
+  padding: 15px 40px;
   color: #ffffff;
   font-weight: bold;
   margin: 20px 10px 40px 10px;
-  box-shadow: 4px 2px 20px #c9c9c9;
+  box-shadow: 4px 2px 20px #bfbfbf;
   background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
 }
 

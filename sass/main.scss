@@ -11,6 +11,7 @@
 // Thèmes.
 
 @import "./utils/variables";
+@import "./utils/mixins";
 
 * {
   margin: 0;
@@ -75,12 +76,12 @@ header {
     color: $color-textlight;
     font-weight: bold;
     margin: 20px 10px 40px 10px;
-    box-shadow: 4px 2px 20px $color-shadow;
     background: linear-gradient(
       177deg,
       $color-secondary 10%,
       $color-primary 90%
     );
+    @include box-shadow;
   }
 }
 
@@ -104,7 +105,7 @@ header {
       box-shadow: 4px 2px 20px $color-shadow;
       padding: 25px;
       border-radius: 25px;
-      margin: 10px;
+      margin: 12px;
       font-size: 0.95rem;
       position: relative;
       &::before {
@@ -256,7 +257,7 @@ footer {
   #fonctionnement {
     margin-right: 40px;
     float: right;
-    width: 25%;
+    width: 27%;
     & ol {
       margin-right: 40px;
       & li::before {
@@ -267,7 +268,7 @@ footer {
   }
   .restaurants {
     padding: 0;
-    width: 70%;
+    width: 68%;
     background-color: initial;
     & .nouveau {
       top: 1.5vw;
@@ -299,13 +300,11 @@ footer {
 #backgroundmenu {
   background: $backgroundcolor-main;
 }
-
 main {
   & .main__title {
     font-family: "Shrikhand", cursive;
   }
 }
-
 #entrees {
   & .entrees__title {
     text-transform: uppercase;
@@ -321,12 +320,19 @@ main {
     text-transform: uppercase;
   }
 }
-
+.entree,
+.plat,
+.dessert {
+  background: #ffffff;
+  margin: 20px 15px;
+  padding: 10px;
+  border-radius: 15px;
+}
 #btn--commander {
   cursor: pointer;
   border: none;
   border-radius: 25px;
-  padding: 15px;
+  padding: 15px 40px;
   color: $color-textlight;
   font-weight: bold;
   margin: 20px 10px 40px 10px;
