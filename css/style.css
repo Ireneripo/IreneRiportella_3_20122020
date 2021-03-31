@@ -34,7 +34,7 @@ header {
   background-color: #f6f6f6;
 }
 #search form {
-  background: linear-gradient(180deg, #d3d3d3 0%, #eaeaea 12%);
+  background: linear-gradient(180deg, lightgray 0%, #eaeaea 12%);
 }
 #search form .search__searchfield {
   width: 120px;
@@ -155,6 +155,18 @@ header {
   height: 70%;
   object-fit: cover;
 }
+.restaurants .nouveau {
+  color: #2c9c81;
+  background-color: #99e2d0;
+  width: fit-content;
+  padding: 6.5px 9.5px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 2px;
+  position: absolute;
+  top: 4vw;
+  right: 4vw;
+}
 
 footer {
   padding: 20px;
@@ -216,7 +228,7 @@ footer ul li .fas {
   }
   #fonctionnement ol li::before {
     left: -1vw;
-    top: 2vw;
+    top: 1.5vw;
   }
 
   .restaurants {
@@ -233,6 +245,10 @@ footer ul li .fas {
     width: 35%;
     height: 20vw;
     flex-wrap: wrap;
+  }
+  .container .far {
+    bottom: 2vw;
+    right: 2vw;
   }
 
   footer {

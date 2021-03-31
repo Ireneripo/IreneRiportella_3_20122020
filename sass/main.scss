@@ -44,7 +44,11 @@ header {
   text-align: center;
   background-color: $backgroundcolor-main;
   & form {
-    background: linear-gradient(180deg, #d3d3d3 0%, #eaeaea 12%);
+    background: linear-gradient(
+      180deg,
+      $backgroundcolor-darker 0%,
+      $backgroundcolor-dark 12%
+    );
     & .search__searchfield {
       width: 120px;
       padding: 16px 5px;
@@ -168,6 +172,18 @@ header {
     height: 70%;
     object-fit: cover;
   }
+  & .nouveau {
+    color: darken($color: $color-tertiary, $amount: 35);
+    background-color: $color-tertiary;
+    width: fit-content;
+    padding: 6.5px 9.5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+    position: absolute;
+    top: 4vw;
+    right: 4vw;
+  }
 }
 footer {
   padding: 20px;
@@ -228,7 +244,7 @@ footer {
       margin-right: 40px;
       & li::before {
         left: -1vw;
-        top: 2vw;
+        top: 1.5vw;
       }
     }
   }
@@ -244,6 +260,10 @@ footer {
       width: 35%;
       height: 20vw;
       flex-wrap: wrap;
+    }
+    & .far {
+      bottom: 2vw;
+      right: 2vw;
     }
   }
   footer {
