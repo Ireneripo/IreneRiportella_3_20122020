@@ -26,7 +26,7 @@ body {
   font-family: "roboto", sans-serif;
 }
 .logo {
-  width: 36vmax;
+  width: 30vmax;
   height: auto;
   margin: 18px;
 }
@@ -60,11 +60,12 @@ header {
   & .search__title {
     font-size: 1.55rem;
     margin: 30px 30px 15px 30px;
+    font-family: "roboto", sans-serif;
   }
   & .search__subtitle {
     font-size: 1rem;
     font-weight: normal;
-    margin: 30px 10px 15px 10px;
+    text-transform: initial;
   }
   & .search__btn {
     cursor: pointer;
@@ -128,6 +129,7 @@ header {
   padding-top: 10px;
   & h2 {
     margin: 40px 10px 10px 20px;
+    text-transform: initial;
   }
   background-color: $backgroundcolor-main;
   & .container {
@@ -144,17 +146,25 @@ header {
     }
   }
   & .far {
+    color: darken($backgroundcolor-main, 40);
     position: absolute;
     bottom: 7vw;
     right: 8vw;
     font-size: 1.5rem;
+    // opacity: 0;
   }
   & .fas {
     position: absolute;
     bottom: 7vw;
     right: 8vw;
     font-size: 1.5rem;
+    color: $color-primary;
+    cursor: pointer;
+    // color: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
     opacity: 0;
+    // &:active {
+    //   opacity: 1;
+    // }
   }
   & .boxrestaurant {
     position: relative;
@@ -164,6 +174,7 @@ header {
     margin-top: 25px;
     border-radius: 15px;
     box-shadow: 4px 2px 20px $color-shadow;
+    background-color: #ffff;
   }
   & .imagerestaurant {
     border-top-left-radius: 15px;
@@ -219,6 +230,12 @@ footer {
       top: 3.5vw;
     }
   }
+  .restaurants {
+    & .nouveau {
+      top: 2.5vw;
+      right: 2.5vw;
+    }
+  }
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -252,6 +269,10 @@ footer {
     padding: 0;
     width: 70%;
     background-color: initial;
+    & .nouveau {
+      top: 1.5vw;
+      right: 1.5vw;
+    }
   }
   .container {
     justify-content: space-evenly;
@@ -269,4 +290,46 @@ footer {
   footer {
     text-align: center;
   }
+}
+
+// Menu La Palette du goût
+#background-image {
+  width: 100%;
+}
+#backgroundmenu {
+  background: $backgroundcolor-main;
+}
+
+main {
+  & .main__title {
+    font-family: "Shrikhand", cursive;
+  }
+}
+
+#entrees {
+  & .entrees__title {
+    text-transform: uppercase;
+  }
+}
+#plats {
+  & .plats__title {
+    text-transform: uppercase;
+  }
+}
+#desserts {
+  & .desserts__title {
+    text-transform: uppercase;
+  }
+}
+
+#btn--commander {
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  padding: 15px;
+  color: $color-textlight;
+  font-weight: bold;
+  margin: 20px 10px 40px 10px;
+  box-shadow: 4px 2px 20px $color-shadow;
+  background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
 }
