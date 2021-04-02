@@ -267,12 +267,12 @@ header {
   font-size: 1.35rem;
   margin: 25px 20px;
 }
-#entrees {
-  & .entrees__title {
+.menu {
+  & .menu__title {
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: initial;
-    margin-left: 20px;
+    margin: 30px 20px;
     position: relative;
     &::before {
       content: "";
@@ -283,80 +283,37 @@ header {
       border-bottom: 3px solid $color-tertiary;
     }
   }
-  & .entree h3,
-  p {
-    font-size: 1rem;
-  }
-  & .check {
-    color: $color-textlight;
-    font-weight: bold;
-    background-color: $color-tertiary;
-    padding: 40px 20px;
+  & .option1,
+  .option2,
+  .option3,
+  .option4 {
+    height: 50px;
+    background: #ffffff;
+    margin: 16px 12px;
+    padding: 10px 0;
+    border-radius: 15px;
+    @include box-shadow;
     display: flex;
-    justify-content: flex-end;
-  }
-}
-#plats {
-  & .plats__title {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: initial;
-    margin-left: 20px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 25px;
-      left: 0%;
-      border-bottom: 3px solid $color-tertiary;
+    justify-content: space-between;
+    text-overflow: elipsis;
+    & .check {
+      color: $color-textlight;
+      background-color: $color-tertiary;
+      font-weight: bold;
+      align-self: center;
+      padding: 27px 20px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
     }
   }
-  & .plat h3,
-  p {
-    font-size: 1rem;
-  }
-  & .check {
-    color: $color-textlight;
-    background-color: $color-tertiary;
-    font-weight: bold;
-  }
-}
-#desserts {
-  & .desserts__title {
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: initial;
-    margin-left: 20px;
-    position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 40px;
-      height: 25px;
-      left: 0%;
-      border-bottom: 3px solid $color-tertiary;
+  & .menu__content {
+    & h3,
+    p {
+      font-size: 0.9rem;
+      margin-left: 10px;
+      text-overflow: ellipsis;
     }
   }
-  & .dessert h3,
-  p {
-    font-size: 1rem;
-  }
-  & .check {
-    color: $color-textlight;
-    background-color: $color-tertiary;
-    font-weight: bold;
-  }
-}
-.entree,
-.plat,
-.dessert {
-  background: #ffffff;
-  margin: 20px 12px;
-  padding: 0px;
-  border-radius: 15px;
-  @include box-shadow;
-  text-overflow: ellipsis;
 }
 #btn--commander {
   cursor: pointer;

@@ -247,14 +247,14 @@ header .logo {
   margin: 25px 20px;
 }
 
-#entrees .entrees__title {
+.menu .menu__title {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: initial;
-  margin-left: 20px;
+  margin: 30px 20px;
   position: relative;
 }
-#entrees .entrees__title::before {
+.menu .menu__title::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -262,77 +262,36 @@ header .logo {
   left: 0%;
   border-bottom: 3px solid #99e2d0;
 }
-#entrees .entree h3,
-#entrees p {
-  font-size: 1rem;
-}
-#entrees .check {
-  color: #ffffff;
-  font-weight: bold;
-  background-color: #99e2d0;
-  padding: 40px 20px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-#plats .plats__title {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: initial;
-  margin-left: 20px;
-  position: relative;
-}
-#plats .plats__title::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  left: 0%;
-  border-bottom: 3px solid #99e2d0;
-}
-#plats .plat h3,
-#plats p {
-  font-size: 1rem;
-}
-#plats .check {
-  color: #ffffff;
-  background-color: #99e2d0;
-  font-weight: bold;
-}
-
-#desserts .desserts__title {
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: initial;
-  margin-left: 20px;
-  position: relative;
-}
-#desserts .desserts__title::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 25px;
-  left: 0%;
-  border-bottom: 3px solid #99e2d0;
-}
-#desserts .dessert h3,
-#desserts p {
-  font-size: 1rem;
-}
-#desserts .check {
-  color: #ffffff;
-  background-color: #99e2d0;
-  font-weight: bold;
-}
-
-.entree,
-.plat,
-.dessert {
+.menu .option1,
+.menu .option2,
+.menu .option3,
+.menu .option4 {
+  height: 50px;
   background: #ffffff;
-  margin: 20px 12px;
-  padding: 0px;
+  margin: 16px 12px;
+  padding: 10px 0;
   border-radius: 15px;
   box-shadow: 3px 3px 20px #bfbfbf;
+  display: flex;
+  justify-content: space-between;
+  text-overflow: elipsis;
+}
+.menu .option1 .check,
+.menu .option2 .check,
+.menu .option3 .check,
+.menu .option4 .check {
+  color: #ffffff;
+  background-color: #99e2d0;
+  font-weight: bold;
+  align-self: center;
+  padding: 27px 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.menu .menu__content h3,
+.menu .menu__content p {
+  font-size: 0.9rem;
+  margin-left: 10px;
   text-overflow: ellipsis;
 }
 
