@@ -266,33 +266,57 @@ header .logo {
 .menu .option2,
 .menu .option3,
 .menu .option4 {
-  height: 50px;
+  cursor: pointer;
+  height: 45px;
   background: #ffffff;
   margin: 16px 12px;
-  padding: 10px 0;
+  padding: 5px 0;
   border-radius: 15px;
   box-shadow: 3px 3px 20px #bfbfbf;
   display: flex;
   justify-content: space-between;
-  text-overflow: elipsis;
 }
-.menu .option1 .check,
-.menu .option2 .check,
-.menu .option3 .check,
-.menu .option4 .check {
-  color: #ffffff;
-  background-color: #99e2d0;
-  font-weight: bold;
+.menu .option1 .checkbox,
+.menu .option2 .checkbox,
+.menu .option3 .checkbox,
+.menu .option4 .checkbox {
+  display: block;
   align-self: center;
-  padding: 27px 20px;
+  padding: 19px;
+  background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+.menu .option1 .checkicon,
+.menu .option2 .checkicon,
+.menu .option3 .checkicon,
+.menu .option4 .checkicon {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: bold;
+}
+.menu .menu__content {
+  align-self: center;
+  margin-left: 10px;
+}
+.menu .menu__content:hover {
+  width: 50%;
 }
 .menu .menu__content h3,
 .menu .menu__content p {
   font-size: 0.9rem;
-  margin-left: 10px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
+}
+.menu .price {
+  font-size: 0.85rem;
+  font-weight: bold;
+  align-self: flex-end;
+  flex-grow: 2;
+  text-align: right;
+  margin: 5px 16px;
 }
 
 #btn--commander {

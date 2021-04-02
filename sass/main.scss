@@ -287,32 +287,51 @@ header {
   .option2,
   .option3,
   .option4 {
-    height: 50px;
+    cursor: pointer;
+    height: 45px;
     background: #ffffff;
     margin: 16px 12px;
-    padding: 10px 0;
+    padding: 5px 0;
     border-radius: 15px;
     @include box-shadow;
     display: flex;
     justify-content: space-between;
-    text-overflow: elipsis;
-    & .check {
-      color: $color-textlight;
-      background-color: $color-tertiary;
-      font-weight: bold;
+    & .checkbox {
+      display: block;
       align-self: center;
-      padding: 27px 20px;
+      padding: 19px;
+      background-color: $color-tertiary;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
     }
+    & .checkicon {
+      display: inline-block;
+      color: $color-textlight;
+      font-weight: bold;
+    }
   }
   & .menu__content {
+    align-self: center;
+    margin-left: 10px;
+    &:hover {
+      width: 50%;
+    }
     & h3,
     p {
       font-size: 0.9rem;
-      margin-left: 10px;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+  & .price {
+    font-size: 0.85rem;
+    font-weight: bold;
+    align-self: flex-end;
+    flex-grow: 2;
+    text-align: right;
+    margin: 5px 16px;
   }
 }
 #btn--commander {
