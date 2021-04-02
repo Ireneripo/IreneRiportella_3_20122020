@@ -26,19 +26,18 @@ html {
 body {
   font-family: "roboto", sans-serif;
 }
-.logo {
-  width: 30vmax;
-  height: auto;
-  margin: 18px;
-}
-
 a {
   text-decoration: none;
   color: black;
 }
 header {
   display: flex;
-  justify-content: center;
+}
+.logo {
+  width: 150px;
+  height: auto;
+  margin: auto;
+  padding: 18px;
 }
 
 #search {
@@ -223,28 +222,43 @@ footer {
 }
 
 // Stylesheet Menu
-
+header {
+  & .arrow {
+    margin: 22px 10px;
+  }
+  & .logo {
+    padding-left: 0;
+  }
+}
 #background-image {
   width: 100%;
 }
 #backgroundmenu {
   background: $backgroundcolor-main;
   padding-bottom: 10px;
-  position: relative;
   & .main__title {
     font-family: "Shrikhand", cursive;
   }
+}
+#menudetail {
+  background: $backgroundcolor-main;
+  padding-top: 10px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  top: -45px;
   & .heart {
     position: absolute;
-    top: 77vw;
-    right: 8vw;
+    right: 12vw;
+    top: 12vw;
     font-size: 1.35rem;
     color: darken($backgroundcolor-main, 50);
   }
-  & .heart2 {
+  & .heart-full {
     position: absolute;
-    top: 77vw;
-    right: 8vw;
+    right: 12vw;
+    top: 12vw;
     font-size: 1.35rem;
     opacity: 0;
   }
@@ -259,9 +273,27 @@ footer {
     font-size: 1rem;
     font-weight: initial;
     margin-left: 20px;
-    // width: fit-content;
-    padding-bottom: 5px;
-    border-bottom: solid 2px $color-tertiary;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      left: 0%;
+      border-bottom: 3px solid $color-tertiary;
+    }
+  }
+  & .entree h3,
+  p {
+    font-size: 1rem;
+  }
+  & .check {
+    color: $color-textlight;
+    font-weight: bold;
+    background-color: $color-tertiary;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 #plats {
@@ -270,6 +302,24 @@ footer {
     font-size: 1rem;
     font-weight: initial;
     margin-left: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      left: 0%;
+      border-bottom: 3px solid $color-tertiary;
+    }
+  }
+  & .plat h3,
+  p {
+    font-size: 1rem;
+  }
+  & .check {
+    color: $color-textlight;
+    background-color: $color-tertiary;
+    font-weight: bold;
   }
 }
 #desserts {
@@ -278,18 +328,36 @@ footer {
     font-size: 1rem;
     font-weight: initial;
     margin-left: 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      left: 0%;
+      border-bottom: 3px solid $color-tertiary;
+    }
+  }
+  & .dessert h3,
+  p {
+    font-size: 1rem;
+  }
+  & .check {
+    color: $color-textlight;
+    background-color: $color-tertiary;
+    font-weight: bold;
   }
 }
 .entree,
 .plat,
 .dessert {
   background: #ffffff;
-  margin: 20px 15px;
-  padding: 10px;
+  margin: 20px 12px;
+  padding: 0px;
   border-radius: 15px;
   @include box-shadow;
+  text-overflow: ellipsis;
 }
-
 #btn--commander {
   cursor: pointer;
   opacity: 0.8;
@@ -298,7 +366,7 @@ footer {
   padding: 15px 50px;
   color: $color-textlight;
   font-weight: bold;
-  margin: 40px auto 70px auto;
+  margin: 40px auto 40px auto;
   display: block;
   @include box-shadow;
   background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
