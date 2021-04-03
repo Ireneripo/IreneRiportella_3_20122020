@@ -296,26 +296,52 @@ header {
     @include box-shadow;
     display: flex;
     justify-content: space-between;
+    &:hover .price {
+      transform: translateX(-5px);
+      transition: 0.3s;
+    }
+    &:hover .checkbox {
+      animation-duration: 0.3s;
+      animation-fill-mode: backwards;
+      animation-timing-function: ease-in-out;
+      animation-name: slidein;
+      animation-fill-mode: forwards;
+      transform-origin: 100% 50%;
+      @keyframes slidein {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+          opacity: 1;
+        }
+      }
+    }
+    &:hover .checkicon {
+      transform: rotate(-2turn);
+      transition: 0.5s;
+    }
     & .checkbox {
-      display: block;
       align-self: center;
-      padding: 19px;
+      padding: 17px;
       background-color: $color-tertiary;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
+      opacity: 0;
     }
     & .checkicon {
       display: inline-block;
       color: $color-textlight;
       font-weight: bold;
+      font-size: 20px;
     }
   }
   & .menu__content {
     align-self: center;
     margin-left: 10px;
-    &:hover {
-      width: 50%;
-    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     & h3,
     p {
       font-size: 0.9rem;
@@ -329,9 +355,10 @@ header {
     font-size: 0.85rem;
     font-weight: bold;
     align-self: flex-end;
-    flex-grow: 2;
+    flex-grow: 1;
     text-align: right;
     margin: 5px 16px;
+    transform: translateX(50px);
   }
 }
 #btn--commander {
