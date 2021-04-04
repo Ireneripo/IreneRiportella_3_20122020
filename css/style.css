@@ -98,14 +98,22 @@ header {
   color: #ffffff;
   font-weight: bolder;
   background-color: #9356dc;
-  border-radius: 50px;
+  border-radius: 100px;
   padding: 5px 9px;
   position: absolute;
   left: -4vw;
   top: 6vw;
 }
-#fonctionnement .fas {
+#fonctionnement ol li:hover {
+  background-color: #f5edff;
+  transition: 0.3s;
+}
+#fonctionnement ol li:hover .howto {
+  color: #9356dc;
+}
+#fonctionnement .howto {
   padding: 0 14px 0 8px;
+  font-weight: bold;
 }
 
 .restaurants {
@@ -129,20 +137,41 @@ header {
   font-size: 1rem;
   margin: 5px 20px 0px 15px;
 }
-.restaurants .far {
+.restaurants .like {
+  position: relative;
+  padding-top: 10px;
+}
+.restaurants .like:hover label {
+  opacity: 1;
+  transition: 0.5s;
+}
+.restaurants .coeur--empty {
   color: #777777;
   position: absolute;
-  bottom: 7vw;
-  right: 8vw;
-  font-size: 1.5rem;
+  bottom: 18px;
+  right: 24px;
+  font-size: 1.6rem;
 }
-.restaurants .fas {
+.restaurants input {
   position: absolute;
-  bottom: 7vw;
-  right: 8vw;
-  font-size: 1.5rem;
-  color: #9356dc;
+  bottom: 25px;
+  right: 31px;
   cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+.restaurants input:checked + label {
+  opacity: 1;
+}
+.restaurants label {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(30deg, #ff79da 30%, #9356dc 80%);
+  font-size: 1.6rem;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+  right: 24px;
   opacity: 0;
 }
 .restaurants .boxrestaurant {
@@ -280,14 +309,14 @@ header .logo {
 .menu .option2:hover .price,
 .menu .option3:hover .price,
 .menu .option4:hover .price {
-  transform: translateX(-5px);
-  transition: 0.3s;
+  transform: translateX(0px);
+  transition: 0.4s;
 }
 .menu .option1:hover .checkbox,
 .menu .option2:hover .checkbox,
 .menu .option3:hover .checkbox,
 .menu .option4:hover .checkbox {
-  animation-duration: 0.3s;
+  animation-duration: 0.4s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
   animation-name: slidein;
@@ -307,7 +336,7 @@ header .logo {
 .menu .option2:hover .checkicon,
 .menu .option3:hover .checkicon,
 .menu .option4:hover .checkicon {
-  transform: rotate(-2turn);
+  transform: rotate(2turn);
   transition: 0.5s;
 }
 .menu .option1 .checkbox,
@@ -421,6 +450,17 @@ header .logo {
   .restaurants .nouveau {
     top: 1.5vw;
     right: 1.5vw;
+  }
+  .restaurants .boxrestaurant input {
+    bottom: 30px;
+    right: 31px;
+  }
+  .restaurants label {
+    bottom: 20px;
+    right: 24px;
+  }
+  .restaurants .like {
+    padding-top: 20px;
   }
 
   .container {

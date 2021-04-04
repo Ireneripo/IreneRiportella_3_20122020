@@ -114,16 +114,27 @@ header {
         color: $color-textlight;
         font-weight: bolder;
         background-color: $color-primary;
-        border-radius: 50px;
+        border-radius: 100px;
         padding: 5px 9px;
         position: absolute;
         left: -4vw;
         top: 6vw;
       }
+      &:hover {
+        background-color: lighten(
+          saturate(adjust-hue($color-primary, -1), 34.31),
+          36.47
+        );
+        transition: 0.3s;
+      }
+      &:hover .howto {
+        color: $color-primary;
+      }
     }
   }
-  & .fas {
+  & .howto {
     padding: 0 14px 0 8px;
+    font-weight: bold;
   }
 }
 .restaurants {
@@ -146,26 +157,46 @@ header {
       margin: 5px 20px 0px 15px;
     }
   }
-  & .far {
+  & .like {
+    position: relative;
+    padding-top: 10px;
+    &:hover label {
+      opacity: 1;
+      transition: 0.5s;
+    }
+  }
+  & .coeur--empty {
     color: darken($backgroundcolor-main, 50);
     position: absolute;
-    bottom: 7vw;
-    right: 8vw;
-    font-size: 1.5rem;
-    // opacity: 0;
+    bottom: 18px;
+    right: 24px;
+    font-size: 1.6rem;
   }
-  & .fas {
+  & input {
     position: absolute;
-    bottom: 7vw;
-    right: 8vw;
-    font-size: 1.5rem;
-    color: $color-primary;
+    bottom: 25px;
+    right: 31px;
     cursor: pointer;
-    // color: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
     opacity: 0;
-    // &:active {
-    //   opacity: 1;
-    // }
+    z-index: 1;
+  }
+  & input:checked + label {
+    opacity: 1;
+  }
+  & label {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      30deg,
+      $color-secondary 30%,
+      $color-primary 80%
+    );
+    font-size: 1.6rem;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 24px;
+    opacity: 0;
   }
   & .boxrestaurant {
     position: relative;
@@ -297,11 +328,11 @@ header {
     display: flex;
     justify-content: space-between;
     &:hover .price {
-      transform: translateX(-5px);
-      transition: 0.3s;
+      transform: translateX(0px);
+      transition: 0.4s;
     }
     &:hover .checkbox {
-      animation-duration: 0.3s;
+      animation-duration: 0.4s;
       animation-fill-mode: backwards;
       animation-timing-function: ease-in-out;
       animation-name: slidein;
@@ -318,7 +349,7 @@ header {
       }
     }
     &:hover .checkicon {
-      transform: rotate(-2turn);
+      transform: rotate(2turn);
       transition: 0.5s;
     }
     & .checkbox {
@@ -427,6 +458,19 @@ header {
     & .nouveau {
       top: 1.5vw;
       right: 1.5vw;
+    }
+    & .boxrestaurant {
+      & input {
+        bottom: 30px;
+        right: 31px;
+      }
+    }
+    & label {
+      bottom: 20px;
+      right: 24px;
+    }
+    & .like {
+      padding-top: 20px;
     }
   }
   .container {
