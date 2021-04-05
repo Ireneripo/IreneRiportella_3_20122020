@@ -1,18 +1,75 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   width: 100%;
   -webkit-overflow-x: hidden;
   overflow-x: hidden;
-  margin: 0;
 }
 
 body {
   font-family: "roboto", sans-serif;
 }
 
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  opacity: 1;
+  z-index: 9999;
+  position: fixed;
+  animation: fade 3s ease-in-out forwards;
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #99e2d0;
+  border-top-color: #9356dc;
+  border-bottom-color: #9356dc;
+  border-radius: 50%;
+  opacity: 1;
+  animation: loading 3s ease-in-out forwards;
+}
+
+.loader-inner {
+  width: 90%;
+  height: 90%;
+  border: 5px solid #99e2d0;
+  border-top-color: #9356dc;
+  border-bottom-color: #9356dc;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 9999;
+  animation: loading 3s ease-in-out forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5) rotate(1turn);
+  }
+  100% {
+    transform: scale(0) rotate(1turn);
+    opacity: 0;
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -58,12 +115,18 @@ header {
   opacity: 0.8;
   border: none;
   border-radius: 25px;
-  padding: 15px 18px;
+  padding: 16px 20px;
   color: #ffffff;
   font-weight: bold;
+  font-size: 0.8rem;
   margin: 20px 10px 40px 10px;
   background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
-  box-shadow: 3px 3px 20px #bfbfbf;
+  box-shadow: 3px 3px 10px #bfbfbf;
+}
+#search .search__btn:hover {
+  opacity: 0.65;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px #0d0d0d;
 }
 
 #fonctionnement {
@@ -85,7 +148,7 @@ header {
 #fonctionnement ol li {
   width: 88%;
   background-color: #f6f6f6;
-  box-shadow: 3px 3px 20px #bfbfbf;
+  box-shadow: 3px 3px 10px #bfbfbf;
   padding: 25px;
   border-radius: 25px;
   margin: 12px;
@@ -143,7 +206,7 @@ header {
 }
 .restaurants .like:hover label {
   opacity: 1;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .restaurants .coeur--empty {
   color: #777777;
@@ -181,7 +244,7 @@ header {
   margin: auto;
   margin-top: 25px;
   border-radius: 15px;
-  box-shadow: 3px 3px 20px #bfbfbf;
+  box-shadow: 3px 3px 10px #bfbfbf;
   background-color: #ffff;
 }
 .restaurants .imagerestaurant {
@@ -256,19 +319,13 @@ header .logo {
   position: relative;
   top: -45px;
 }
-#menudetail .heart {
-  position: absolute;
-  right: 12vw;
-  top: 12vw;
-  font-size: 1.35rem;
-  color: #777777;
+#menudetail .like {
+  position: relative;
+  padding-top: 10px;
 }
-#menudetail .heart-full {
-  position: absolute;
-  right: 12vw;
-  top: 12vw;
-  font-size: 1.35rem;
-  opacity: 0;
+#menudetail .like:hover label {
+  opacity: 1;
+  transition: 0.8s;
 }
 
 .main__title {
@@ -301,7 +358,7 @@ header .logo {
   margin: 16px 12px;
   padding: 5px 0;
   border-radius: 15px;
-  box-shadow: 3px 3px 20px #bfbfbf;
+  box-shadow: 3px 3px 10px #bfbfbf;
   display: flex;
   justify-content: space-between;
 }
@@ -310,13 +367,13 @@ header .logo {
 .menu .option3:hover .price,
 .menu .option4:hover .price {
   transform: translateX(0px);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 .menu .option1:hover .checkbox,
 .menu .option2:hover .checkbox,
 .menu .option3:hover .checkbox,
 .menu .option4:hover .checkbox {
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
   animation-name: slidein;
@@ -389,13 +446,19 @@ header .logo {
   opacity: 0.8;
   border: none;
   border-radius: 25px;
-  padding: 15px 50px;
+  padding: 16px 50px;
   color: #ffffff;
   font-weight: bold;
+  font-size: 0.95rem;
   margin: 40px auto 40px auto;
   display: block;
-  box-shadow: 3px 3px 20px #bfbfbf;
+  box-shadow: 3px 3px 10px #bfbfbf;
   background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
+}
+#btn--commander:hover {
+  opacity: 0.65;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px #0d0d0d;
 }
 
 @media screen and (min-width: 600px) {

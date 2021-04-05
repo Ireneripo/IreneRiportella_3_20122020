@@ -15,17 +15,71 @@
 
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
   width: 100%;
   -webkit-overflow-x: hidden;
   overflow-x: hidden;
-  margin: 0;
 }
-
 body {
   font-family: "roboto", sans-serif;
 }
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  opacity: 1;
+  z-index: 9999;
+  position: fixed;
+  animation: fade 3s ease-in-out forwards;
+}
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 5px solid $color-tertiary;
+  border-top-color: $color-primary;
+  border-bottom-color: $color-primary;
+  border-radius: 50%;
+  opacity: 1;
+  animation: loading 3s ease-in-out forwards;
+}
+.loader-inner {
+  width: 90%;
+  height: 90%;
+  border: 5px solid $color-tertiary;
+  border-top-color: $color-primary;
+  border-bottom-color: $color-primary;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 9999;
+  animation: loading 3s ease-in-out forwards;
+}
+@keyframes loading {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5) rotate(1turn);
+  }
+  100% {
+    transform: scale(0) rotate(1turn);
+    opacity: 0;
+  }
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -72,9 +126,10 @@ header {
     opacity: 0.8;
     border: none;
     border-radius: 25px;
-    padding: 15px 18px;
+    padding: 16px 20px;
     color: $color-textlight;
     font-weight: bold;
+    font-size: 0.8rem;
     margin: 20px 10px 40px 10px;
     background: linear-gradient(
       177deg,
@@ -82,6 +137,11 @@ header {
       $color-primary 90%
     );
     @include box-shadow;
+    &:hover {
+      opacity: 0.65;
+      transition: 0.3s;
+      @include box-shadow--dark;
+    }
   }
 }
 
@@ -157,14 +217,7 @@ header {
       margin: 5px 20px 0px 15px;
     }
   }
-  & .like {
-    position: relative;
-    padding-top: 10px;
-    &:hover label {
-      opacity: 1;
-      transition: 0.5s;
-    }
-  }
+  @include like;
   & .coeur--empty {
     color: darken($backgroundcolor-main, 50);
     position: absolute;
@@ -279,20 +332,22 @@ header {
   padding-bottom: 30px;
   position: relative;
   top: -45px;
-  & .heart {
-    position: absolute;
-    right: 12vw;
-    top: 12vw;
-    font-size: 1.35rem;
-    color: darken($backgroundcolor-main, 50);
-  }
-  & .heart-full {
-    position: absolute;
-    right: 12vw;
-    top: 12vw;
-    font-size: 1.35rem;
-    opacity: 0;
-  }
+  @include like;
+
+  // & .heart {
+  //   position: absolute;
+  //   right: 12vw;
+  //   top: 12vw;
+  //   font-size: 1.35rem;
+  //   color: darken($backgroundcolor-main, 50);
+  // }
+  // & .heart-full {
+  //   position: absolute;
+  //   right: 12vw;
+  //   top: 12vw;
+  //   font-size: 1.35rem;
+  //   opacity: 0;
+  // }
 }
 .main__title {
   font-size: 1.35rem;
@@ -329,10 +384,10 @@ header {
     justify-content: space-between;
     &:hover .price {
       transform: translateX(0px);
-      transition: 0.4s;
+      transition: 0.5s;
     }
     &:hover .checkbox {
-      animation-duration: 0.4s;
+      animation-duration: 0.5s;
       animation-fill-mode: backwards;
       animation-timing-function: ease-in-out;
       animation-name: slidein;
@@ -397,13 +452,19 @@ header {
   opacity: 0.8;
   border: none;
   border-radius: 25px;
-  padding: 15px 50px;
+  padding: 16px 50px;
   color: $color-textlight;
   font-weight: bold;
+  font-size: 0.95rem;
   margin: 40px auto 40px auto;
   display: block;
   @include box-shadow;
   background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
+  &:hover {
+    opacity: 0.65;
+    transition: 0.3s;
+    @include box-shadow--dark;
+  }
 }
 
 @media screen and (min-width: 600px) {

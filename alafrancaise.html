@@ -21,8 +21,11 @@
 
             <section id="menudetail">
                 <h1 class="main__title">À la française</h1>
-                <i class="far heart fa-heart"></i>
-                <i class="fas heart-full fa-heart"></i>
+                <div class="like">
+                    <i class="far coeur--empty fa-heart"></i>
+                    <input type="checkbox" name="coeur--full" id="coeur--full">
+                    <label for="coeur--full"><i class="fas coeur--full fa-heart"></i></label>
+                </div>
 
                 <article id="entrees" class="menu">
                     <h2 class="menu__title">Entrées</h2>
@@ -113,7 +116,7 @@
                         <span class="checkbox"><i class="fas checkicon fa-check-circle"></i></span>
                     </div>
                 </article>
-                <button id="btn--commander">Comander</button>
+                <button id="btn--commander">Commander</button>
             </section>
         </main>
 

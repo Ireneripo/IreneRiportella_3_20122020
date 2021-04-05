@@ -1,3 +1,18 @@
 @mixin box-shadow($colour: $color-shadow) {
-  box-shadow: 3px 3px 20px $colour;
+  box-shadow: 3px 3px 10px $colour;
+}
+
+@mixin box-shadow--dark($colour: $color-shadow--dark) {
+  box-shadow: 3px 3px 10px $colour;
+}
+
+@mixin like {
+  .like {
+    position: relative;
+    padding-top: 10px;
+    &:hover label {
+      opacity: 1;
+      transition: 0.8s;
+    }
+  }
 }
