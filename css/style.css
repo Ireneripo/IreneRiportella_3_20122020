@@ -40,8 +40,8 @@ body {
   width: 60px;
   height: 60px;
   border: 5px solid #99e2d0;
-  border-top-color: #9356dc;
-  border-bottom-color: #9356dc;
+  border-top-color: #9256dc;
+  border-bottom-color: #9256dc;
   border-radius: 50%;
   opacity: 1;
   animation: loading 3s ease-in-out forwards;
@@ -51,8 +51,8 @@ body {
   width: 90%;
   height: 90%;
   border: 5px solid #99e2d0;
-  border-top-color: #9356dc;
-  border-bottom-color: #9356dc;
+  border-top-color: #9256dc;
+  border-bottom-color: #9256dc;
   border-radius: 50%;
   opacity: 1;
   z-index: 9999;
@@ -119,7 +119,7 @@ header {
   font-weight: bold;
   font-size: 0.8rem;
   margin: 20px 10px 40px 10px;
-  background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
+  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
   box-shadow: 3px 3px 10px #bfbfbf;
 }
 #search .search__btn:hover {
@@ -130,10 +130,11 @@ header {
 }
 
 #fonctionnement {
+  animation: restaurants 2.5s ease-in-out forwards;
   margin-bottom: 40px;
 }
 #fonctionnement h2 {
-  margin: 40px 20px 15px 20px;
+  margin: 40px 20px 15px 30px;
 }
 #fonctionnement ol {
   width: 90%;
@@ -145,7 +146,7 @@ header {
   padding: 0;
   margin: auto;
   opacity: 0;
-  animation: fonctionnement 4s ease-in-out forwards;
+  animation: fonctionnement 2.5s ease-in-out forwards;
 }
 @keyframes fonctionnement {
   from {
@@ -170,7 +171,7 @@ header {
   counter-increment: liste-couleur;
   color: #ffffff;
   font-weight: bolder;
-  background-color: #9356dc;
+  background-color: #9256dc;
   border-radius: 100px;
   padding: 5px 9px;
   position: absolute;
@@ -182,7 +183,7 @@ header {
   transition: 0.3s;
 }
 #fonctionnement ol li:hover .howto {
-  color: #9356dc;
+  color: #9256dc;
 }
 #fonctionnement .howto {
   padding: 0 14px 0 8px;
@@ -190,11 +191,12 @@ header {
 }
 
 .restaurants {
+  animation: restaurants 2.5s ease-in-out forwards;
   padding-top: 10px;
   background-color: #f6f6f6;
 }
 .restaurants h2 {
-  margin: 40px 10px 10px 20px;
+  margin: 40px 10px 10px 30px;
   text-transform: initial;
 }
 .restaurants .container {
@@ -215,7 +217,7 @@ header {
 }
 .restaurants .like:hover label {
   opacity: 1;
-  transition: 0.8s;
+  transition: 1s;
 }
 .restaurants .coeur--empty {
   color: #777777;
@@ -238,7 +240,7 @@ header {
 .restaurants label {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(30deg, #ff79da 30%, #9356dc 80%);
+  background-image: linear-gradient(30deg, #ff79da 30%, #9256dc 80%);
   font-size: 1.6rem;
   display: block;
   position: absolute;
@@ -255,7 +257,7 @@ header {
   border-radius: 15px;
   box-shadow: 3px 3px 10px #bfbfbf;
   background-color: #ffff;
-  animation: restaurants 3s ease-in-out forwards;
+  animation: restaurants 2.5s ease-in-out 0.6s forwards;
 }
 @keyframes restaurants {
   from {
@@ -312,7 +314,7 @@ footer ul li .fas {
 }
 
 header .arrow {
-  margin: 22px 10px;
+  margin: 22px 20px;
 }
 header .logo {
   padding-left: 0;
@@ -350,7 +352,7 @@ header .logo {
 }
 #menudetail .like:hover label {
   opacity: 1;
-  transition: 0.8s;
+  transition: 1s;
 }
 #menudetail .coeur--empty {
   color: #777777;
@@ -373,7 +375,7 @@ header .logo {
 #menudetail label {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(30deg, #ff79da 30%, #9356dc 80%);
+  background-image: linear-gradient(30deg, #ff79da 30%, #9256dc 80%);
   font-size: 1.6rem;
   display: block;
   position: absolute;
@@ -418,6 +420,7 @@ header .logo {
   margin: 10px 12px;
   padding: 5px 0;
   border-radius: 15px;
+  overflow: hidden;
   box-shadow: 3px 3px 10px #bfbfbf;
   display: flex;
   justify-content: space-between;
@@ -427,14 +430,21 @@ header .logo {
 .menu .option3 .price-check,
 .menu .option4 .price-check {
   display: flex;
-  transform: translateX(50px);
+  transform: translateX(60px);
 }
 .menu .option1:hover .price-check,
 .menu .option2:hover .price-check,
 .menu .option3:hover .price-check,
 .menu .option4:hover .price-check {
-  transform: translateX(0);
-  transition: 0.3s;
+  animation: checkslide 0.5s ease-in-out forwards;
+}
+@keyframes checkslide {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .menu .option1 .checkicon,
 .menu .option2 .checkicon,
@@ -449,8 +459,8 @@ header .logo {
 .menu .option2:hover .checkicon,
 .menu .option3:hover .checkicon,
 .menu .option4:hover .checkicon {
-  transform: rotate(1turn);
-  transition: 0.5s;
+  transform: rotate(2turn);
+  transition: 0.7s;
 }
 .menu .option1 .checkbox,
 .menu .option2 .checkbox,
@@ -461,14 +471,12 @@ header .logo {
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  opacity: 0;
 }
 .menu .option1:hover .checkbox,
 .menu .option2:hover .checkbox,
 .menu .option3:hover .checkbox,
 .menu .option4:hover .checkbox {
-  opacity: 1;
-  transition: 1.4s;
+  animation: checkslide 0.5s ease-in-out forwards;
 }
 .menu .menu__content {
   margin-left: 10px;
@@ -492,15 +500,18 @@ header .logo {
 }
 
 #entrees {
+  transform: scale(0);
   animation: dishes 2s ease-in-out forwards;
 }
 
 #plats {
-  animation: dishes 2s ease-in-out 0.3s forwards;
+  transform: scale(0);
+  animation: dishes 2s ease-in-out 0.4s forwards;
 }
 
 #desserts {
-  animation: dishes 2s ease-in-out 0.6s forwards;
+  transform: scale(0);
+  animation: dishes 2s ease-in-out 0.8s forwards;
 }
 
 @keyframes dishes {
@@ -525,7 +536,7 @@ header .logo {
   margin: 40px auto 40px auto;
   display: block;
   box-shadow: 3px 3px 10px #bfbfbf;
-  background: linear-gradient(177deg, #ff79da 10%, #9356dc 90%);
+  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
 }
 #btn--commander:hover {
   opacity: 0.65;
