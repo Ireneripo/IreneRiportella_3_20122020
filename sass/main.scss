@@ -41,6 +41,7 @@ body {
 @keyframes fade {
   to {
     opacity: 0;
+    z-index: -9999;
   }
 }
 .loader {
@@ -68,15 +69,13 @@ body {
   animation: loading 3s ease-in-out forwards;
 }
 @keyframes loading {
-  0% {
-    transform: scale(1);
+  from {
+    transform: scale(1) rotate(2turn);
   }
-  50% {
-    transform: scale(0.5) rotate(1turn);
-  }
-  100% {
-    transform: scale(0) rotate(1turn);
+  to {
+    transform: scale(0);
     opacity: 0;
+    z-index: -9999;
   }
 }
 
@@ -141,6 +140,7 @@ header {
       opacity: 0.65;
       transition: 0.3s;
       @include box-shadow--dark;
+      transition: 0.3s;
     }
   }
 }

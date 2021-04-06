@@ -30,6 +30,7 @@ body {
 @keyframes fade {
   to {
     opacity: 0;
+    z-index: -9999;
   }
 }
 .loader {
@@ -59,15 +60,13 @@ body {
 }
 
 @keyframes loading {
-  0% {
-    transform: scale(1);
+  from {
+    transform: scale(1) rotate(2turn);
   }
-  50% {
-    transform: scale(0.5) rotate(1turn);
-  }
-  100% {
-    transform: scale(0) rotate(1turn);
+  to {
+    transform: scale(0);
     opacity: 0;
+    z-index: -9999;
   }
 }
 a {
@@ -127,6 +126,7 @@ header {
   opacity: 0.65;
   transition: 0.3s;
   box-shadow: 3px 3px 10px #0d0d0d;
+  transition: 0.3s;
 }
 
 #fonctionnement {
