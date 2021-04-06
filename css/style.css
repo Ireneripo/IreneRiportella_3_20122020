@@ -157,7 +157,6 @@ header {
 }
 .restaurants .like {
   position: relative;
-  padding-top: 10px;
 }
 .restaurants .like:hover label {
   opacity: 1;
@@ -293,15 +292,43 @@ header .logo {
 }
 #menudetail .like {
   position: relative;
-  padding-top: 10px;
 }
 #menudetail .like:hover label {
   opacity: 1;
   transition: 0.8s;
 }
+#menudetail .coeur--empty {
+  color: #777777;
+  position: absolute;
+  bottom: 30px;
+  right: 28px;
+  font-size: 1.6rem;
+}
+#menudetail input {
+  position: absolute;
+  bottom: 37px;
+  right: 34px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 1;
+}
+#menudetail input:checked + label {
+  opacity: 1;
+}
+#menudetail label {
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(30deg, #ff79da 30%, #9356dc 80%);
+  font-size: 1.6rem;
+  display: block;
+  position: absolute;
+  bottom: 27px;
+  right: 28px;
+  opacity: 0;
+}
 
 .main__title {
-  font-size: 1.35rem;
+  font-size: 1.52rem;
   margin: 25px 20px;
 }
 

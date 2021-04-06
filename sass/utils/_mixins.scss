@@ -9,7 +9,6 @@
 @mixin like {
   .like {
     position: relative;
-    padding-top: 10px;
     &:hover label {
       opacity: 1;
       transition: 0.8s;

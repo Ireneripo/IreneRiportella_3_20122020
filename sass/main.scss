@@ -360,6 +360,39 @@ header {
   position: relative;
   top: -45px;
   @include like;
+  & .coeur--empty {
+    color: darken($backgroundcolor-main, 50);
+    position: absolute;
+    bottom: 30px;
+    right: 28px;
+    font-size: 1.6rem;
+  }
+  & input {
+    position: absolute;
+    bottom: 37px;
+    right: 34px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+  & input:checked + label {
+    opacity: 1;
+  }
+  & label {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      30deg,
+      $color-secondary 30%,
+      $color-primary 80%
+    );
+    font-size: 1.6rem;
+    display: block;
+    position: absolute;
+    bottom: 27px;
+    right: 28px;
+    opacity: 0;
+  }
 
   // & .heart {
   //   position: absolute;
@@ -377,7 +410,7 @@ header {
   // }
 }
 .main__title {
-  font-size: 1.35rem;
+  font-size: 1.52rem;
   margin: 25px 20px;
 }
 .menu {
