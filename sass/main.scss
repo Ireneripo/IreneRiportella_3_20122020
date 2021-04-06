@@ -393,21 +393,6 @@ header {
     right: 28px;
     opacity: 0;
   }
-
-  // & .heart {
-  //   position: absolute;
-  //   right: 12vw;
-  //   top: 12vw;
-  //   font-size: 1.35rem;
-  //   color: darken($backgroundcolor-main, 50);
-  // }
-  // & .heart-full {
-  //   position: absolute;
-  //   right: 12vw;
-  //   top: 12vw;
-  //   font-size: 1.35rem;
-  //   opacity: 0;
-  // }
 }
 .main__title {
   font-size: 1.52rem;
@@ -429,42 +414,41 @@ header {
       border-bottom: 3px solid $color-tertiary;
     }
   }
+  & .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   & .option1,
   .option2,
   .option3,
   .option4 {
+    width: 92%;
+    height: 55px;
     cursor: pointer;
-    height: 45px;
     background: #ffffff;
-    margin: 16px 12px;
+    margin: 10px 12px;
     padding: 5px 0;
     border-radius: 15px;
     @include box-shadow;
     display: flex;
     justify-content: space-between;
-    &:hover .price {
-      transform: translateX(0px);
-      transition: 0.5s;
+    & .price-check {
+      display: flex;
+      transform: translateX(50px);
     }
-    &:hover .checkbox {
-      animation-duration: 0.5s;
-      animation-fill-mode: backwards;
-      animation-timing-function: ease-in-out;
-      animation-name: slidein;
-      animation-fill-mode: forwards;
-      transform-origin: 100% 50%;
-      @keyframes slidein {
-        from {
-          transform: scaleX(0);
-        }
-        to {
-          transform: scaleX(1);
-          opacity: 1;
-        }
-      }
+    &:hover .price-check {
+      transform: translateX(0);
+      transition: 0.3s;
+    }
+    & .checkicon {
+      display: inline-block;
+      color: $color-textlight;
+      font-weight: bold;
+      font-size: 20px;
     }
     &:hover .checkicon {
-      transform: rotate(2turn);
+      transform: rotate(1turn);
       transition: 0.5s;
     }
     & .checkbox {
@@ -475,15 +459,12 @@ header {
       border-bottom-right-radius: 15px;
       opacity: 0;
     }
-    & .checkicon {
-      display: inline-block;
-      color: $color-textlight;
-      font-weight: bold;
-      font-size: 20px;
+    &:hover .checkbox {
+      opacity: 1;
+      transition: 1.4s;
     }
   }
   & .menu__content {
-    align-self: center;
     margin-left: 10px;
     white-space: nowrap;
     overflow: hidden;
@@ -501,10 +482,7 @@ header {
     font-size: 0.85rem;
     font-weight: bold;
     align-self: flex-end;
-    flex-grow: 1;
-    text-align: right;
-    margin: 5px 16px;
-    transform: translateX(50px);
+    margin: 5px 12px;
   }
 }
 #entrees {
@@ -578,6 +556,15 @@ header {
     & .far {
       bottom: 3vw;
       right: 4vw;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .menucomplet {
+    display: flex;
+    & .menu {
+      width: 33%;
     }
   }
 }
