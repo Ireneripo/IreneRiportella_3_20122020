@@ -26,58 +26,58 @@ html {
 body {
   font-family: "roboto", sans-serif;
 }
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  opacity: 1;
-  z-index: 9999;
-  position: fixed;
-  animation: fade 3s ease-in-out forwards;
-}
-@keyframes fade {
-  to {
-    opacity: 0;
-    z-index: -9999;
-  }
-}
-.loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border: 5px solid $color-tertiary;
-  border-top-color: $color-primary;
-  border-bottom-color: $color-primary;
-  border-radius: 50%;
-  opacity: 1;
-  animation: loading 3s ease-in-out forwards;
-}
-.loader-inner {
-  width: 90%;
-  height: 90%;
-  border: 5px solid $color-tertiary;
-  border-top-color: $color-primary;
-  border-bottom-color: $color-primary;
-  border-radius: 50%;
-  opacity: 1;
-  z-index: 9999;
-  animation: loading 3s ease-in-out forwards;
-}
-@keyframes loading {
-  from {
-    transform: scale(1) rotate(2turn);
-  }
-  to {
-    transform: scale(0);
-    opacity: 0;
-    z-index: -9999;
-  }
-}
+// .loader-wrapper {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   background-color: #ffffff;
+//   opacity: 1;
+//   z-index: 9999;
+//   position: fixed;
+//   animation: fade 3s ease-in-out forwards;
+// }
+// @keyframes fade {
+//   to {
+//     opacity: 0;
+//     z-index: -9999;
+//   }
+// }
+// .loader {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 60px;
+//   height: 60px;
+//   border: 5px solid $color-tertiary;
+//   border-top-color: $color-primary;
+//   border-bottom-color: $color-primary;
+//   border-radius: 50%;
+//   opacity: 1;
+//   animation: loading 3s ease-in-out forwards;
+// }
+// .loader-inner {
+//   width: 90%;
+//   height: 90%;
+//   border: 5px solid $color-tertiary;
+//   border-top-color: $color-primary;
+//   border-bottom-color: $color-primary;
+//   border-radius: 50%;
+//   opacity: 1;
+//   z-index: 9999;
+//   animation: loading 3s ease-in-out forwards;
+// }
+// @keyframes loading {
+//   from {
+//     transform: scale(1) rotate(2turn);
+//   }
+//   to {
+//     transform: scale(0);
+//     opacity: 0;
+//     z-index: -9999;
+//   }
+// }
 
 a {
   text-decoration: none;
@@ -159,6 +159,16 @@ header {
     align-items: center;
     padding: 0;
     margin: auto;
+    opacity: 0;
+    animation: fonctionnement 4s ease-in-out forwards;
+    @keyframes fonctionnement {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
     & li {
       width: 88%;
       background-color: $backgroundcolor-main;
@@ -197,6 +207,7 @@ header {
     font-weight: bold;
   }
 }
+
 .restaurants {
   padding-top: 10px;
   & h2 {
@@ -260,6 +271,17 @@ header {
     border-radius: 15px;
     @include box-shadow;
     background-color: #ffff;
+    animation: restaurants 4s ease-in-out forwards;
+    @keyframes restaurants {
+      from {
+        opacity: 0;
+        transform: scale(0);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
   & .imagerestaurant {
     border-top-left-radius: 15px;
@@ -316,6 +338,11 @@ header {
 }
 #background-image {
   width: 100%;
+}
+.detail-enchantee {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
 }
 #backgroundmenu {
   background: $backgroundcolor-main;
@@ -447,6 +474,25 @@ header {
     transform: translateX(50px);
   }
 }
+#entrees {
+  animation: dishes 2s ease-in-out forwards;
+}
+#plats {
+  animation: dishes 2s ease-in-out 0.3s forwards;
+}
+#desserts {
+  animation: dishes 2s ease-in-out 0.6s forwards;
+}
+@keyframes dishes {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 #btn--commander {
   cursor: pointer;
   opacity: 0.8;
@@ -476,6 +522,10 @@ header {
       left: -2vw;
       top: 3.5vw;
     }
+  }
+  #background-image {
+    object-fit: cover;
+    height: 250px;
   }
   .restaurants {
     & .nouveau {
@@ -511,6 +561,10 @@ header {
         top: 1.5vw;
       }
     }
+  }
+  #background-image {
+    object-fit: cover;
+    height: 350px;
   }
   .restaurants {
     padding: 0;
