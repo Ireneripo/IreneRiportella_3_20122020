@@ -1,0 +1,57 @@
+@keyframes fade {
+  to {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: scale(1) rotate(2turn);
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+
+@keyframes fonctionnement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes restaurants {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes checkslide {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes dishes {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

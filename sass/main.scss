@@ -12,6 +12,7 @@
 
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/keyframes";
 
 * {
   margin: 0;
@@ -38,12 +39,6 @@ body {
   position: fixed;
   animation: fade 3s ease-in-out forwards;
 }
-@keyframes fade {
-  to {
-    opacity: 0;
-    z-index: -9999;
-  }
-}
 .loader {
   display: flex;
   justify-content: center;
@@ -67,16 +62,6 @@ body {
   opacity: 1;
   z-index: 9999;
   animation: loading 3s ease-in-out forwards;
-}
-@keyframes loading {
-  from {
-    transform: scale(1) rotate(2turn);
-  }
-  to {
-    transform: scale(0);
-    opacity: 0;
-    z-index: -9999;
-  }
 }
 a {
   text-decoration: none;
@@ -165,14 +150,6 @@ header {
     margin: auto;
     opacity: 0;
     animation: fonctionnement 2.5s ease-in-out forwards;
-    @keyframes fonctionnement {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
     & li {
       width: 88%;
       background-color: $backgroundcolor-main;
@@ -277,16 +254,6 @@ header {
     @include box-shadow;
     background-color: #ffff;
     animation: restaurants 2.5s ease-in-out 0.6s forwards;
-    @keyframes restaurants {
-      from {
-        opacity: 0;
-        transform: scale(0);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
   }
   & .imagerestaurant {
     border-top-left-radius: 15px;
@@ -446,14 +413,6 @@ header {
     &:hover .price-check {
       animation: checkslide 0.35s ease-in-out forwards;
     }
-    @keyframes checkslide {
-      0% {
-        transform: translateX(60px);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
     & .checkicon {
       display: inline-block;
       color: $color-textlight;
@@ -507,16 +466,6 @@ header {
 #desserts {
   transform: scale(0);
   animation: dishes 2s ease-in-out 0.8s forwards;
-}
-@keyframes dishes {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
 }
 #btn--commander {
   cursor: pointer;

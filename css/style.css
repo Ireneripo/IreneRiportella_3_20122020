@@ -1,3 +1,55 @@
+@keyframes fade {
+  to {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+@keyframes loading {
+  from {
+    transform: scale(1) rotate(2turn);
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+@keyframes fonctionnement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes restaurants {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes checkslide {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes dishes {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -27,12 +79,6 @@ body {
   animation: fade 3s ease-in-out forwards;
 }
 
-@keyframes fade {
-  to {
-    opacity: 0;
-    z-index: -9999;
-  }
-}
 .loader {
   display: flex;
   justify-content: center;
@@ -59,16 +105,6 @@ body {
   animation: loading 3s ease-in-out forwards;
 }
 
-@keyframes loading {
-  from {
-    transform: scale(1) rotate(2turn);
-  }
-  to {
-    transform: scale(0);
-    opacity: 0;
-    z-index: -9999;
-  }
-}
 a {
   text-decoration: none;
   color: black;
@@ -151,14 +187,6 @@ header {
   margin: auto;
   opacity: 0;
   animation: fonctionnement 2.5s ease-in-out forwards;
-}
-@keyframes fonctionnement {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 #fonctionnement ol li {
   width: 88%;
@@ -262,16 +290,6 @@ header {
   box-shadow: 3px 3px 10px #bfbfbf;
   background-color: #ffff;
   animation: restaurants 2.5s ease-in-out 0.6s forwards;
-}
-@keyframes restaurants {
-  from {
-    opacity: 0;
-    transform: scale(0);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 .restaurants .imagerestaurant {
   border-top-left-radius: 15px;
@@ -442,14 +460,6 @@ header .logo {
 .menu .option4:hover .price-check {
   animation: checkslide 0.35s ease-in-out forwards;
 }
-@keyframes checkslide {
-  0% {
-    transform: translateX(60px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 .menu .option1 .checkicon,
 .menu .option2 .checkicon,
 .menu .option3 .checkicon,
@@ -518,16 +528,6 @@ header .logo {
   animation: dishes 2s ease-in-out 0.8s forwards;
 }
 
-@keyframes dishes {
-  from {
-    transform: scale(0);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 #btn--commander {
   cursor: pointer;
   opacity: 0.8;
