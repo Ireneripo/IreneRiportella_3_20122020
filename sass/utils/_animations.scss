@@ -4,7 +4,6 @@
     z-index: -9999;
   }
 }
-
 @keyframes loading {
   from {
     transform: scale(1) rotate(2turn);
@@ -15,7 +14,6 @@
     z-index: -9999;
   }
 }
-
 @keyframes fonctionnement {
   from {
     opacity: 0;
@@ -35,7 +33,6 @@
     transform: scale(1);
   }
 }
-
 @keyframes checkslide {
   0% {
     transform: translateX(60px);
@@ -44,7 +41,6 @@
     transform: translateX(0);
   }
 }
-
 @keyframes dishes {
   from {
     transform: scale(0);
