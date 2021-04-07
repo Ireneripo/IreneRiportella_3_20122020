@@ -89,6 +89,9 @@ header {
   text-align: center;
   background-color: #f6f6f6;
 }
+#search .search__subtitle {
+  margin: 30px 15px;
+}
 #search form {
   background: linear-gradient(180deg, lightgray 0%, #eaeaea 12%);
 }
@@ -436,7 +439,7 @@ header .logo {
 .menu .option2:hover .price-check,
 .menu .option3:hover .price-check,
 .menu .option4:hover .price-check {
-  animation: checkslide 0.5s ease-in-out forwards;
+  animation: checkslide 0.35s ease-in-out forwards;
 }
 @keyframes checkslide {
   0% {
@@ -476,7 +479,7 @@ header .logo {
 .menu .option2:hover .checkbox,
 .menu .option3:hover .checkbox,
 .menu .option4:hover .checkbox {
-  animation: checkslide 0.5s ease-in-out forwards;
+  animation: checkslide 0.35s ease-in-out forwards;
 }
 .menu .menu__content {
   margin-left: 10px;
@@ -496,7 +499,7 @@ header .logo {
   font-size: 0.85rem;
   font-weight: bold;
   align-self: flex-end;
-  margin: 5px 12px;
+  margin: 5px 20px;
 }
 
 #entrees {
