@@ -115,8 +115,7 @@ header {
 }
 
 .logo {
-  width: 150px;
-  height: auto;
+  width: 60%;
   margin: auto;
   padding: 18px;
 }
@@ -335,11 +334,16 @@ footer ul li .fas {
   margin-right: 10px;
 }
 
-header .arrow {
-  margin: 22px 20px;
+header a {
+  margin: auto;
+  margin-left: 12px;
 }
-header .logo {
+header .logo-menu {
+  width: 60%;
+  margin: auto;
+  padding: 18px;
   padding-left: 0;
+  margin-left: 0;
 }
 
 #background-image {
@@ -582,6 +586,14 @@ header .logo {
     bottom: 3vw;
     right: 4vw;
   }
+
+  header .logo-menu {
+    width: 50%;
+    margin: auto;
+    padding: 18px;
+    padding-left: 0;
+    margin-left: 0;
+  }
 }
 @media screen and (min-width: 736px) {
   .menucomplet {
@@ -590,8 +602,7 @@ header .logo {
   .menucomplet .menu {
     width: 33%;
   }
-}
-@media screen and (min-width: 736px) {
+
   .restaurants .boxrestaurant input {
     bottom: 37px;
     right: 46px;
@@ -602,6 +613,55 @@ header .logo {
   }
   .restaurants .like {
     padding-top: 20px;
+  }
+
+  header .logo-menu {
+    width: 35%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 36vw;
+  }
+
+  #fonctionnement ol li::before {
+    left: -2vw;
+    top: 2.5vw;
+  }
+
+  .restaurants .boxrestaurant input {
+    bottom: 31px;
+    right: 37px;
+  }
+  .restaurants label {
+    bottom: 20px;
+    right: 31px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 32vw;
+  }
+
+  #fonctionnement ol li::before {
+    left: -1.5vw;
+    top: 2vw;
+  }
+
+  .restaurants .boxrestaurant {
+    height: 28vw;
+  }
+  .restaurants .boxrestaurant input {
+    bottom: 3.9vw;
+    right: 4.6vw;
+  }
+  .restaurants label {
+    bottom: 2.6vw;
+    right: 4vw;
+  }
+
+  header .logo-menu {
+    width: 30%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -660,6 +720,112 @@ header .logo {
 
   footer {
     text-align: center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .logo {
+    width: 28vw;
+  }
+
+  .restaurants h2 {
+    font-size: 1.9rem;
+  }
+  .restaurants .boxrestaurant input {
+    bottom: 2.5vw;
+    right: 2.4vw;
+  }
+  .restaurants .boxrestaurant h3 {
+    font-size: 1.3rem;
+  }
+  .restaurants .boxrestaurant p {
+    font-size: 1.2rem;
+  }
+  .restaurants label {
+    bottom: 1.75vw;
+    right: 2vw;
+  }
+
+  #search form .search__searchfield {
+    width: 15vw;
+    padding: 2vw 2vw;
+    font-size: 1.2rem;
+  }
+  #search .search__title {
+    font-size: 1.9rem;
+  }
+  #search .search__subtitle {
+    font-size: 1.25rem;
+  }
+  #search .search__btn {
+    font-size: 1.1rem;
+  }
+
+  #fonctionnement h2 {
+    font-size: 1.9rem;
+  }
+  #fonctionnement ol li {
+    width: 100%;
+    font-size: 1.18rem;
+  }
+  #fonctionnement ol li::before {
+    padding: 5px 11px;
+    left: -1vw;
+    top: 1.5vw;
+  }
+
+  #menudetail .coeur--empty {
+    bottom: 1.7vw;
+    right: 5vw;
+    font-size: 1.9rem;
+  }
+  #menudetail input {
+    position: absolute;
+    bottom: 2.4vw;
+    right: 5.6vw;
+  }
+  #menudetail input:checked + label {
+    opacity: 1;
+  }
+  #menudetail label {
+    font-size: 1.9rem;
+    bottom: 1.5vw;
+    right: 5vw;
+  }
+
+  header .arrow {
+    font-size: 1.5rem;
+  }
+  header .logo-menu {
+    width: 25%;
+  }
+
+  .main__title {
+    font-size: 2rem;
+    margin: 25px 20px 15px 30px;
+  }
+
+  .menu .menu__title {
+    font-size: 1.3rem;
+    margin: 30px;
+  }
+  .menu .option1,
+.menu .option2,
+.menu .option3,
+.menu .option4 {
+    width: 87%;
+    height: 70px;
+  }
+  .menu .menu__content h3,
+.menu .menu__content p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  .menu .price {
+    font-size: 1.15rem;
+  }
+
+  #btn--commander {
+    font-size: 1.1rem;
   }
 }
 
