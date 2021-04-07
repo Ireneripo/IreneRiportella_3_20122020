@@ -154,6 +154,7 @@ header {
     margin: 40px 20px 15px 30px;
   }
   & ol {
+    cursor: default;
     width: 90%;
     list-style-type: none;
     counter-reset: liste-couleur;
