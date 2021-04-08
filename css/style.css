@@ -301,7 +301,9 @@ header {
   color: #2c9c81;
   background-color: #99e2d0;
   width: max-content;
-  transform: translateX(200%) translateY(-700%);
+  position: absolute;
+  top: 0.5em;
+  right: -0.5em;
   padding: 6.5px 9.5px;
   font-size: 15px;
   font-weight: bold;
@@ -569,11 +571,6 @@ header .logo-menu {
     height: 250px;
   }
 
-  .restaurants .nouveau {
-    top: 2.5vw;
-    right: 2.5vw;
-  }
-
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -689,10 +686,6 @@ header .logo-menu {
     padding: 0;
     width: 68%;
     background-color: initial;
-  }
-  .restaurants .nouveau {
-    top: 1.5vw;
-    right: 1.5vw;
   }
   .restaurants .boxrestaurant input {
     bottom: 30px;

@@ -265,7 +265,10 @@ header {
     color: darken($color: $color-tertiary, $amount: 35);
     background-color: $color-tertiary;
     width: max-content;
-    transform: translateX(200%) translateY(-700%);
+    position: absolute;
+    top: 0.5em;
+    right: -0.5em;
+
     padding: 6.5px 9.5px;
     font-size: 15px;
     font-weight: bold;
@@ -506,12 +509,6 @@ header {
     object-fit: cover;
     height: 250px;
   }
-  .restaurants {
-    & .nouveau {
-      top: 2.5vw;
-      right: 2.5vw;
-    }
-  }
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -641,10 +638,6 @@ header {
     padding: 0;
     width: 68%;
     background-color: initial;
-    & .nouveau {
-      top: 1.5vw;
-      right: 1.5vw;
-    }
     & .boxrestaurant {
       & input {
         bottom: 30px;
