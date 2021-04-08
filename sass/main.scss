@@ -264,7 +264,7 @@ header {
   & .nouveau {
     color: darken($color: $color-tertiary, $amount: 35);
     background-color: $color-tertiary;
-    width: max-content;
+    width: fit-content;
     position: absolute;
     top: 0.5em;
     right: -0.5em;

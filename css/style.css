@@ -300,7 +300,7 @@ header {
 .restaurants .nouveau {
   color: #2c9c81;
   background-color: #99e2d0;
-  width: max-content;
+  width: fit-content;
   position: absolute;
   top: 0.5em;
   right: -0.5em;
