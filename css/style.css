@@ -66,6 +66,51 @@ body {
   font-family: "roboto", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.search__btn {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 20px 10px 40px 10px;
+  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
+  box-shadow: 3px 3px 10px #bfbfbf;
+}
+.search__btn:hover {
+  opacity: 0.65;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px #0d0d0d;
+  transition: 0.3s;
+}
+
+#btn--commander {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 50px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 40px auto 40px auto;
+  display: block;
+  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
+  box-shadow: 3px 3px 10px #bfbfbf;
+}
+#btn--commander:hover {
+  opacity: 0.65;
+  transition: 0.3s;
+  box-shadow: 3px 3px 10px #0d0d0d;
+}
+
 .loader-wrapper {
   width: 100%;
   height: 100%;
@@ -105,11 +150,6 @@ body {
   animation: loading 3s ease-in-out forwards;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 header {
   display: flex;
 }
@@ -146,25 +186,6 @@ header {
   font-size: 1rem;
   font-weight: normal;
   text-transform: initial;
-}
-#search .search__btn {
-  cursor: pointer;
-  opacity: 0.8;
-  border: none;
-  border-radius: 25px;
-  padding: 16px 20px;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 0.8rem;
-  margin: 20px 10px 40px 10px;
-  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
-  box-shadow: 3px 3px 10px #bfbfbf;
-}
-#search .search__btn:hover {
-  opacity: 0.65;
-  transition: 0.3s;
-  box-shadow: 3px 3px 10px #0d0d0d;
-  transition: 0.3s;
 }
 
 #fonctionnement {
@@ -533,26 +554,6 @@ header .logo-menu {
 #desserts {
   transform: scale(0);
   animation: dishes 2s ease-in-out 0.8s forwards;
-}
-
-#btn--commander {
-  cursor: pointer;
-  opacity: 0.8;
-  border: none;
-  border-radius: 25px;
-  padding: 16px 50px;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 0.95rem;
-  margin: 40px auto 40px auto;
-  display: block;
-  box-shadow: 3px 3px 10px #bfbfbf;
-  background: linear-gradient(177deg, #ff79da 10%, #9256dc 90%);
-}
-#btn--commander:hover {
-  opacity: 0.65;
-  transition: 0.3s;
-  box-shadow: 3px 3px 10px #0d0d0d;
 }
 
 @media screen and (min-width: 600px) {

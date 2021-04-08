@@ -15,3 +15,41 @@
     }
   }
 }
+@mixin search__btn {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 20px;
+  color: $color-light;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 20px 10px 40px 10px;
+  background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
+  @include box-shadow;
+  &:hover {
+    opacity: 0.65;
+    transition: 0.3s;
+    @include box-shadow--dark;
+    transition: 0.3s;
+  }
+}
+@mixin btn--commander {
+  cursor: pointer;
+  opacity: 0.8;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 50px;
+  color: $color-light;
+  font-weight: bold;
+  font-size: 0.95rem;
+  margin: 40px auto 40px auto;
+  display: block;
+  background: linear-gradient(177deg, $color-secondary 10%, $color-primary 90%);
+  @include box-shadow;
+  &:hover {
+    opacity: 0.65;
+    transition: 0.3s;
+    @include box-shadow--dark;
+  }
+}
