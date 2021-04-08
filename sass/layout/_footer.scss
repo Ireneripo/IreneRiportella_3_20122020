@@ -1,0 +1,23 @@
+footer {
+  padding: 20px;
+  background-color: $backgroundcolor-footer;
+  & h4 {
+    color: $color-light;
+    font-family: "Shrikhand", cursive;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  & ul {
+    padding: 0;
+    & li {
+      list-style-type: none;
+      margin-bottom: 10px;
+      & a {
+        color: $color-light;
+      }
+      & .fas {
+        margin-right: 10px;
+      }
+    }
+  }
+}

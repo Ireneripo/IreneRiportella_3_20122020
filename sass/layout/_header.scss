@@ -1,0 +1,24 @@
+// homepage
+header {
+  display: flex;
+  & .logo {
+    width: 42vmax;
+    margin: auto;
+    padding: 18px;
+  }
+}
+
+// menu
+header {
+  & a {
+    margin: auto;
+    margin-left: 12px;
+  }
+  & .logo-menu {
+    width: 42vmax;
+    margin: auto;
+    padding: 18px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+}

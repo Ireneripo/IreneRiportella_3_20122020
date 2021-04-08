@@ -1,0 +1,339 @@
+// homepage
+#search {
+  text-align: center;
+  background-color: $backgroundcolor-main;
+  & .search__subtitle {
+    margin: 30px 15px;
+  }
+  & form {
+    background: linear-gradient(
+      180deg,
+      $backgroundcolor-darker 0%,
+      $backgroundcolor-dark 12%
+    );
+    & .search__searchfield {
+      width: 120px;
+      padding: 16px 5px;
+      font-weight: bold;
+      border: none;
+      background-color: transparent;
+    }
+  }
+  & .search__title {
+    font-size: 1.55rem;
+    margin: 30px 30px 15px 30px;
+    font-family: "roboto", sans-serif;
+  }
+  & .search__subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: initial;
+  }
+}
+#fonctionnement {
+  animation: restaurants 2.5s ease-in-out forwards;
+  margin-bottom: 40px;
+  & h2 {
+    margin: 40px 20px 15px 30px;
+  }
+  & ol {
+    cursor: default;
+    width: 90%;
+    list-style-type: none;
+    counter-reset: liste-couleur;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+    opacity: 0;
+    animation: fonctionnement 2.5s ease-in-out forwards;
+    & li {
+      width: 88%;
+      background-color: $backgroundcolor-main;
+      @include box-shadow;
+      padding: 25px;
+      border-radius: 25px;
+      margin: 12px;
+      font-size: 0.95rem;
+      position: relative;
+      &::before {
+        content: counter(liste-couleur);
+        counter-increment: liste-couleur;
+        color: $color-light;
+        font-weight: bolder;
+        background-color: $color-primary;
+        border-radius: 100px;
+        padding: 5px 9px;
+        position: absolute;
+        left: -4vw;
+        top: 6vw;
+      }
+      &:hover {
+        background-color: lighten(
+          saturate(adjust-hue($color-primary, -1), 34.31),
+          36.47
+        );
+        transition: 0.3s;
+      }
+      &:hover .howto {
+        color: $color-primary;
+      }
+    }
+  }
+  & .howto {
+    padding: 0 14px 0 8px;
+    font-weight: bold;
+  }
+}
+.restaurants {
+  animation: restaurants 2.5s ease-in-out forwards;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  & h2 {
+    margin: 40px 10px 10px 30px;
+    text-transform: initial;
+  }
+  background-color: $backgroundcolor-main;
+  & .restaurants__cards {
+    width: 100%;
+    padding-bottom: 40px;
+    margin: auto;
+    & h3 {
+      font-size: 1.1rem;
+      margin: 8px 20px 0px 15px;
+    }
+    & p {
+      font-size: 1rem;
+      margin: 5px 20px 0px 15px;
+    }
+  }
+  @include like;
+  & .coeur--empty {
+    color: darken($backgroundcolor-main, 50);
+    position: absolute;
+    bottom: 18px;
+    right: 24px;
+    font-size: 1.6rem;
+  }
+  & input {
+    position: absolute;
+    bottom: 25px;
+    right: 31px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+  & input:checked + label {
+    opacity: 1;
+  }
+  & label {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      30deg,
+      $color-secondary 30%,
+      $color-primary 80%
+    );
+    font-size: 1.6rem;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    right: 24px;
+    opacity: 0;
+  }
+  & .boxrestaurant {
+    position: relative;
+    width: 85%;
+    height: 70vw;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 15px;
+    @include box-shadow;
+    background-color: $color-light;
+    animation: restaurants 2.5s ease-in-out 0.6s forwards;
+  }
+  & .imagerestaurant {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  & .nouveau {
+    color: darken($color: $color-tertiary, $amount: 35);
+    background-color: $color-tertiary;
+    width: fit-content;
+    position: absolute;
+    top: 0.5em;
+    right: -0.5em;
+
+    padding: 6.5px 9.5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+  }
+}
+
+// menu
+#background-image {
+  width: 100%;
+}
+.detail-enchantee {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+}
+#backgroundmenu {
+  background: $backgroundcolor-main;
+  padding-bottom: 10px;
+  & .main__title {
+    font-family: "Shrikhand", cursive;
+  }
+}
+#menudetail {
+  background: $backgroundcolor-main;
+  padding-top: 10px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding-bottom: 30px;
+  position: relative;
+  top: -45px;
+  @include like;
+  & .coeur--empty {
+    color: darken($backgroundcolor-main, 50);
+    position: absolute;
+    bottom: 30px;
+    right: 28px;
+    font-size: 1.6rem;
+  }
+  & input {
+    position: absolute;
+    bottom: 37px;
+    right: 34px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+  }
+  & input:checked + label {
+    opacity: 1;
+  }
+  & label {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      30deg,
+      $color-secondary 30%,
+      $color-primary 80%
+    );
+    font-size: 1.6rem;
+    display: block;
+    position: absolute;
+    bottom: 27px;
+    right: 28px;
+    opacity: 0;
+  }
+}
+.main__title {
+  font-size: 1.52rem;
+  margin: 25px 20px;
+}
+.menu {
+  & .menu__title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: initial;
+    margin: 30px 20px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 25px;
+      left: 0%;
+      border-bottom: 3px solid $color-tertiary;
+    }
+  }
+  & .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  & .option1,
+  .option2,
+  .option3,
+  .option4 {
+    width: 92%;
+    height: 55px;
+    cursor: pointer;
+    background: $color-light;
+    margin: 10px 12px;
+    padding: 5px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    @include box-shadow;
+    display: flex;
+    justify-content: space-between;
+    & .price-check {
+      display: flex;
+      align-self: center;
+      transform: translateX(60px);
+    }
+    &:hover .price-check {
+      animation: checkslide 0.35s ease-in-out forwards;
+    }
+    & .checkicon {
+      display: inline-block;
+      color: $color-light;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    &:hover .checkicon {
+      transform: rotate(2turn);
+      transition: 0.7s;
+    }
+    & .checkbox {
+      align-self: center;
+      padding: 17px;
+      background-color: $color-tertiary;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+    &:hover .checkbox {
+      animation: checkslide 0.35s ease-in-out forwards;
+    }
+  }
+  & .menu__content {
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    & h3,
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  & .price {
+    font-size: 0.85rem;
+    font-weight: bold;
+    align-self: flex-end;
+    margin: 8px 20px;
+  }
+}
+#entrees {
+  transform: scale(0);
+  animation: dishes 2s ease-in-out forwards;
+}
+#plats {
+  transform: scale(0);
+  animation: dishes 2s ease-in-out 0.4s forwards;
+}
+#desserts {
+  transform: scale(0);
+  animation: dishes 2s ease-in-out 0.8s forwards;
+}
