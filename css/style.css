@@ -224,6 +224,7 @@ header {
 .restaurants {
   animation: restaurants 2.5s ease-in-out forwards;
   padding-top: 10px;
+  padding-bottom: 20px;
   background-color: #f6f6f6;
 }
 .restaurants h2 {
@@ -318,7 +319,7 @@ footer h4 {
   color: #ffffff;
   font-family: "Shrikhand", cursive;
   font-size: 1.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 footer ul {
   padding: 0;

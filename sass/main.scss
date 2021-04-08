@@ -187,10 +187,10 @@ header {
     font-weight: bold;
   }
 }
-
 .restaurants {
   animation: restaurants 2.5s ease-in-out forwards;
   padding-top: 10px;
+  padding-bottom: 20px;
   & h2 {
     margin: 40px 10px 10px 30px;
     text-transform: initial;
@@ -282,7 +282,7 @@ footer {
     color: $color-textlight;
     font-family: "Shrikhand", cursive;
     font-size: 1.3rem;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   & ul {
     padding: 0;
