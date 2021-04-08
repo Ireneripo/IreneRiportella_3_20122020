@@ -15,7 +15,7 @@
     object-fit: cover;
     height: 250px;
   }
-  .container {
+  .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -71,7 +71,6 @@
     }
   }
 }
-
 @media screen and (min-width: 768px) {
   #fonctionnement {
     & ol li::before {
@@ -158,7 +157,7 @@
       padding-top: 20px;
     }
   }
-  .container {
+  .restaurants__cards {
     justify-content: space-evenly;
     & .boxrestaurant {
       margin: 20px 0;
