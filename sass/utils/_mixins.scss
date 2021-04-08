@@ -1,3 +1,39 @@
+@mixin loader-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-light;
+  opacity: 1;
+  z-index: 9999;
+  position: fixed;
+  animation: fade 3s ease-in-out forwards;
+}
+@mixin loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border: 5px solid $color-tertiary;
+  border-top-color: $color-primary;
+  border-bottom-color: $color-primary;
+  border-radius: 50%;
+  opacity: 1;
+  animation: loading 3s ease-in-out forwards;
+}
+@mixin loader-inner {
+  width: 90%;
+  height: 90%;
+  border: 5px solid $color-tertiary;
+  border-top-color: $color-primary;
+  border-bottom-color: $color-primary;
+  border-radius: 50%;
+  opacity: 1;
+  z-index: 9999;
+  animation: loading 3s ease-in-out forwards;
+}
 @mixin box-shadow($colour: $color-shadow) {
   box-shadow: 3px 3px 10px $colour;
 }
