@@ -413,6 +413,7 @@ header {
     justify-content: space-between;
     & .price-check {
       display: flex;
+      align-self: center;
       transform: translateX(60px);
     }
     &:hover .price-check {
@@ -448,6 +449,7 @@ header {
     p {
       font-size: 0.9rem;
       margin-bottom: 5px;
+      margin-top: 5px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -457,7 +459,7 @@ header {
     font-size: 0.85rem;
     font-weight: bold;
     align-self: flex-end;
-    margin: 5px 20px;
+    margin: 8px 20px;
   }
 }
 #entrees {
@@ -534,7 +536,7 @@ header {
   }
 }
 
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 734px) {
   .logo {
     width: 30vmax;
   }
@@ -771,25 +773,15 @@ header {
     .option4 {
       width: 87%;
       height: 70px;
-      // & .checkicon {
-      //   display: inline-block;
-      //   color: $color-textlight;
-      //   font-weight: bold;
-      //   font-size: 20px;
-      // }
-      // & .checkbox {
-      //   align-self: center;
-      //   padding: 17px;
-      //   background-color: $color-tertiary;
-      //   border-top-right-radius: 15px;
-      //   border-bottom-right-radius: 15px;
-      // }
+      & .checkicon {
+        font-size: 24px;
+        margin: 7px 0;
+      }
     }
     & .menu__content {
       & h3,
       p {
         font-size: 1.2rem;
-        margin-bottom: 5px;
       }
     }
     & .price {

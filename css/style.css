@@ -456,6 +456,7 @@ header .logo-menu {
 .menu .option3 .price-check,
 .menu .option4 .price-check {
   display: flex;
+  align-self: center;
   transform: translateX(60px);
 }
 .menu .option1:hover .price-check,
@@ -506,6 +507,7 @@ header .logo-menu {
 .menu .menu__content p {
   font-size: 0.9rem;
   margin-bottom: 5px;
+  margin-top: 5px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -514,7 +516,7 @@ header .logo-menu {
   font-size: 0.85rem;
   font-weight: bold;
   align-self: flex-end;
-  margin: 5px 20px;
+  margin: 8px 20px;
 }
 
 #entrees {
@@ -594,7 +596,7 @@ header .logo-menu {
     margin-left: 0;
   }
 }
-@media screen and (min-width: 736px) {
+@media screen and (min-width: 734px) {
   .logo {
     width: 30vmax;
   }
@@ -810,10 +812,16 @@ header .logo-menu {
     width: 87%;
     height: 70px;
   }
+  .menu .option1 .checkicon,
+.menu .option2 .checkicon,
+.menu .option3 .checkicon,
+.menu .option4 .checkicon {
+    font-size: 24px;
+    margin: 7px 0;
+  }
   .menu .menu__content h3,
 .menu .menu__content p {
     font-size: 1.2rem;
-    margin-bottom: 5px;
   }
   .menu .price {
     font-size: 1.15rem;
