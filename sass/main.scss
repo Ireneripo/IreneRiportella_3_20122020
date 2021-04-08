@@ -14,19 +14,8 @@
 @import "./utils/mixins";
 @import "./utils/animations";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  width: 100%;
-  -webkit-overflow-x: hidden;
-  overflow-x: hidden;
-}
-body {
-  font-family: "roboto", sans-serif;
-}
+@import "./base/base";
+
 .loader-wrapper {
   width: 100%;
   height: 100%;
