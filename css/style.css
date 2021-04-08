@@ -169,17 +169,17 @@ a {
     height: 250px;
   }
 
-  .container {
+  .restaurants__cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .container .boxrestaurant {
+  .restaurants__cards .boxrestaurant {
     width: 42%;
     height: 36vw;
     margin: 10px 15px;
   }
-  .container .far {
+  .restaurants__cards .far {
     bottom: 3vw;
     right: 4vw;
   }
@@ -297,16 +297,16 @@ a {
     padding-top: 20px;
   }
 
-  .container {
+  .restaurants__cards {
     justify-content: space-evenly;
   }
-  .container .boxrestaurant {
+  .restaurants__cards .boxrestaurant {
     margin: 20px 0;
     width: 35%;
     height: 20vw;
     flex-wrap: wrap;
   }
-  .container .far {
+  .restaurants__cards .far {
     bottom: 2vw;
     right: 2vw;
   }
