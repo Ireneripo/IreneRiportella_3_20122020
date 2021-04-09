@@ -32,6 +32,7 @@
 }
 
 #fonctionnement {
+  -webkit-animation: restaurants 2.5s ease-in-out forwards;
   animation: restaurants 2.5s ease-in-out forwards;
   margin-bottom: 40px;
   & h2 {
@@ -48,6 +49,7 @@
     padding: 0;
     margin: auto;
     opacity: 0;
+    -webkit-animation: fonctionnement 2.5s ease-in-out forwards;
     animation: fonctionnement 2.5s ease-in-out forwards;
     & li {
       width: 88%;
@@ -89,6 +91,7 @@
 }
 
 .restaurants {
+  -webkit-animation: restaurants 2.5s ease-in-out forwards;
   animation: restaurants 2.5s ease-in-out forwards;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -153,6 +156,7 @@
     border-radius: 15px;
     @include box-shadow;
     background-color: $color-light;
+    -webkit-animation: restaurants 2.5s ease-in-out 0.6s forwards;
     animation: restaurants 2.5s ease-in-out 0.6s forwards;
   }
   & .imagerestaurant {
@@ -160,11 +164,14 @@
     border-top-right-radius: 15px;
     width: 100%;
     height: 70%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
   & .nouveau {
     color: darken($color: $color-tertiary, $amount: 35);
     background-color: $color-tertiary;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     position: absolute;
     top: 0.5em;
@@ -182,6 +189,7 @@
   width: 100%;
 }
 .detail-enchantee {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 300px;
   height: 200px;
@@ -282,6 +290,7 @@
       transform: translateX(60px);
     }
     &:hover .price-check {
+      -webkit-animation: checkslide 0.35s ease-in-out forwards;
       animation: checkslide 0.35s ease-in-out forwards;
     }
     & .checkicon {
@@ -302,6 +311,7 @@
       border-bottom-right-radius: 15px;
     }
     &:hover .checkbox {
+      -webkit-animation: checkslide 0.35s ease-in-out forwards;
       animation: checkslide 0.35s ease-in-out forwards;
     }
   }
@@ -329,13 +339,16 @@
 }
 #entrees {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out forwards;
   animation: dishes 2s ease-in-out forwards;
 }
 #plats {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out 0.4s forwards;
   animation: dishes 2s ease-in-out 0.4s forwards;
 }
 #desserts {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out 0.8s forwards;
   animation: dishes 2s ease-in-out 0.8s forwards;
 }

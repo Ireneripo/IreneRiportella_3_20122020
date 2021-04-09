@@ -1,5 +1,21 @@
+@-webkit-keyframes fade {
+  to {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
 @keyframes fade {
   to {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+@-webkit-keyframes loading {
+  from {
+    transform: scale(1) rotate(2turn);
+  }
+  to {
+    transform: scale(0);
     opacity: 0;
     z-index: -9999;
   }
@@ -14,12 +30,30 @@
     z-index: -9999;
   }
 }
+@-webkit-keyframes fonctionnement {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes fonctionnement {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@-webkit-keyframes restaurants {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes restaurants {
@@ -32,12 +66,30 @@
     transform: scale(1);
   }
 }
+@-webkit-keyframes checkslide {
+  0% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @keyframes checkslide {
   0% {
     transform: translateX(60px);
   }
   100% {
     transform: translateX(0);
+  }
+}
+@-webkit-keyframes dishes {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes dishes {
@@ -81,6 +133,7 @@ a {
   opacity: 1;
   z-index: 9999;
   position: fixed;
+  -webkit-animation: fade 3s ease-in-out forwards;
   animation: fade 3s ease-in-out forwards;
 }
 
@@ -95,6 +148,7 @@ a {
   border-bottom-color: #9256dc;
   border-radius: 50%;
   opacity: 1;
+  -webkit-animation: loading 3s ease-in-out forwards;
   animation: loading 3s ease-in-out forwards;
 }
 
@@ -107,6 +161,7 @@ a {
   border-radius: 50%;
   opacity: 1;
   z-index: 9999;
+  -webkit-animation: loading 3s ease-in-out forwards;
   animation: loading 3s ease-in-out forwards;
 }
 
@@ -200,6 +255,7 @@ header .logo-menu {
 }
 
 #fonctionnement {
+  -webkit-animation: restaurants 2.5s ease-in-out forwards;
   animation: restaurants 2.5s ease-in-out forwards;
   margin-bottom: 40px;
 }
@@ -217,6 +273,7 @@ header .logo-menu {
   padding: 0;
   margin: auto;
   opacity: 0;
+  -webkit-animation: fonctionnement 2.5s ease-in-out forwards;
   animation: fonctionnement 2.5s ease-in-out forwards;
 }
 #fonctionnement ol li {
@@ -254,6 +311,7 @@ header .logo-menu {
 }
 
 .restaurants {
+  -webkit-animation: restaurants 2.5s ease-in-out forwards;
   animation: restaurants 2.5s ease-in-out forwards;
   padding-top: 10px;
   padding-bottom: 20px;
@@ -321,6 +379,7 @@ header .logo-menu {
   border-radius: 15px;
   box-shadow: 3px 3px 10px #bfbfbf;
   background-color: #ffffff;
+  -webkit-animation: restaurants 2.5s ease-in-out 0.6s forwards;
   animation: restaurants 2.5s ease-in-out 0.6s forwards;
 }
 .restaurants .imagerestaurant {
@@ -328,11 +387,14 @@ header .logo-menu {
   border-top-right-radius: 15px;
   width: 100%;
   height: 70%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .restaurants .nouveau {
   color: #2c9c81;
   background-color: #99e2d0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   position: absolute;
   top: 0.5em;
@@ -348,6 +410,7 @@ header .logo-menu {
 }
 
 .detail-enchantee {
+  -o-object-fit: cover;
   object-fit: cover;
   width: 300px;
   height: 200px;
@@ -460,6 +523,7 @@ header .logo-menu {
 .menu .option2:hover .price-check,
 .menu .option3:hover .price-check,
 .menu .option4:hover .price-check {
+  -webkit-animation: checkslide 0.35s ease-in-out forwards;
   animation: checkslide 0.35s ease-in-out forwards;
 }
 .menu .option1 .checkicon,
@@ -492,6 +556,7 @@ header .logo-menu {
 .menu .option2:hover .checkbox,
 .menu .option3:hover .checkbox,
 .menu .option4:hover .checkbox {
+  -webkit-animation: checkslide 0.35s ease-in-out forwards;
   animation: checkslide 0.35s ease-in-out forwards;
 }
 .menu .menu__content {
@@ -518,16 +583,19 @@ header .logo-menu {
 
 #entrees {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out forwards;
   animation: dishes 2s ease-in-out forwards;
 }
 
 #plats {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out 0.4s forwards;
   animation: dishes 2s ease-in-out 0.4s forwards;
 }
 
 #desserts {
   transform: scale(0);
+  -webkit-animation: dishes 2s ease-in-out 0.8s forwards;
   animation: dishes 2s ease-in-out 0.8s forwards;
 }
 
@@ -572,6 +640,7 @@ footer ul li .fas {
   }
 
   #background-image {
+    -o-object-fit: cover;
     object-fit: cover;
     height: 250px;
   }
@@ -663,6 +732,7 @@ footer ul li .fas {
   }
 
   #background-image {
+    -o-object-fit: cover;
     object-fit: cover;
     height: 350px;
   }
