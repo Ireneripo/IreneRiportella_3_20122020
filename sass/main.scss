@@ -75,6 +75,11 @@
   }
 }
 @media screen and (min-width: 768px) {
+  header {
+    & .logo-home {
+      width: 54vmin;
+    }
+  }
   #fonctionnement {
     & ol li::before {
       left: -2vw;
@@ -91,6 +96,11 @@
     & label {
       bottom: 20px;
       right: 31px;
+    }
+  }
+  header {
+    & .logo-menu {
+      width: 54vmin;
     }
   }
 }

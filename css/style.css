@@ -681,6 +681,10 @@ footer ul li .fas {
   }
 }
 @media screen and (min-width: 768px) {
+  header .logo-home {
+    width: 54vmin;
+  }
+
   #fonctionnement ol li::before {
     left: -2vw;
     top: 2.5vw;
@@ -693,6 +697,10 @@ footer ul li .fas {
   .restaurants label {
     bottom: 20px;
     right: 31px;
+  }
+
+  header .logo-menu {
+    width: 54vmin;
   }
 }
 @media screen and (min-width: 1024px) {
