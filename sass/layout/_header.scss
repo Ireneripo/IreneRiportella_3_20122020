@@ -1,8 +1,8 @@
 // homepage
 header {
   display: flex;
-  & .logo {
-    width: 42vmax;
+  & .logo-home {
+    width: 64vmin;
     margin: auto;
     padding: 18px;
   }
@@ -15,7 +15,7 @@ header {
     margin-left: 12px;
   }
   & .logo-menu {
-    width: 42vmax;
+    width: 64vmin;
     margin: auto;
     padding: 18px;
     padding-left: 0;

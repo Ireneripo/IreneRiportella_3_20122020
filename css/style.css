@@ -153,8 +153,8 @@ a {
 header {
   display: flex;
 }
-header .logo {
-  width: 42vmax;
+header .logo-home {
+  width: 64vmin;
   margin: auto;
   padding: 18px;
 }
@@ -164,7 +164,7 @@ header a {
   margin-left: 12px;
 }
 header .logo-menu {
-  width: 42vmax;
+  width: 64vmin;
   margin: auto;
   padding: 18px;
   padding-left: 0;
@@ -555,11 +555,13 @@ footer ul li .fas {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 600px) {
-  .logo {
-    width: 38vmax;
+@media screen and (min-width: 425px) {
+  #fonctionnement ol li::before {
+    left: -2.5vw;
+    top: 4.1vw;
   }
-
+}
+@media screen and (min-width: 600px) {
   #search .search__subtitle {
     margin: 30px 100px;
   }
@@ -588,20 +590,8 @@ footer ul li .fas {
     bottom: 3vw;
     right: 4vw;
   }
-
-  header .logo-menu {
-    width: 38vmax;
-    margin: auto;
-    padding: 18px;
-    padding-left: 0;
-    margin-left: 0;
-  }
 }
 @media screen and (min-width: 734px) {
-  .logo {
-    width: 30vmax;
-  }
-
   .menucomplet {
     display: flex;
   }
@@ -610,19 +600,15 @@ footer ul li .fas {
   }
 
   .restaurants .boxrestaurant input {
-    bottom: 37px;
-    right: 46px;
+    bottom: 3.9vw;
+    right: 4.9vw;
   }
   .restaurants label {
-    bottom: 27px;
-    right: 41px;
+    bottom: 2.7vw;
+    right: 4vw;
   }
   .restaurants .like {
     padding-top: 20px;
-  }
-
-  header .logo-menu {
-    width: 30vmax;
   }
 }
 @media screen and (min-width: 768px) {
@@ -641,10 +627,6 @@ footer ul li .fas {
   }
 }
 @media screen and (min-width: 1024px) {
-  .logo {
-    width: 24vmax;
-  }
-
   #fonctionnement ol li::before {
     left: -1.5vw;
     top: 2vw;
@@ -664,10 +646,6 @@ footer ul li .fas {
 
   footer {
     text-align: center;
-  }
-
-  header .logo-menu {
-    width: 24vmax;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -721,10 +699,6 @@ footer ul li .fas {
   }
 }
 @media screen and (min-width: 1440px) {
-  .logo {
-    width: 22vmax;
-  }
-
   .restaurants h2 {
     font-size: 1.9rem;
   }
@@ -792,9 +766,6 @@ footer ul li .fas {
 
   header .arrow {
     font-size: 1.5rem;
-  }
-  header .logo-menu {
-    width: 22vmax;
   }
 
   .main__title {
